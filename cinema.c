@@ -7,7 +7,7 @@
 
 
 pthread_t tid[NbClients+Nbcaisses];
-pthread_mutex_t mutex;
+pthread_mutex_t mutex_attenteClient;
 pthread_cond_t attendre, dormir;
 
 int nbClientsAttente=0;
@@ -15,34 +15,34 @@ int nbAppelCaisse=0;
 
 void VendreBillet(int numCaisse){
     
-    pthread_mutex_lock(&mutex);
+    pthread_mutex_lock(&mutex_attenteClient);
     
     if(nbClientsAttente == 0)
     {
         printf("pas de clients à la caisse numero %d \n",numCaisse);
         printf("appels caisse %d\n",nbAppelCaisse);	
-        pthread_cond_wait(&dormir, &mutex);
+        pthread_cond_wait(&dormir, &mutex_attenteClient);
         
         //	usleep(200000);	
     }
     printf("la caissière n° %d appelle un client !\n",numCaisse);
     nbAppelCaisse++;
     pthread_cond_signal(&attendre);
-    pthread_mutex_unlock(&mutex);
+    pthread_mutex_unlock(&mutex_attenteClient);
     
 }
 
-void Client(int i)
+void AcheterBillet(int i)
 {
     
-    pthread_mutex_lock(&mutex);
+    pthread_mutex_lock(&mutex_attenteClient);
     nbClientsAttente++;
     pthread_cond_signal(&dormir);
     printf("Le client %d arrive \n",i);
-    pthread_cond_wait(&attendre,&mutex);
+    pthread_cond_wait(&attendre,&mutex_attenteClient);
     printf("client %d vient acheter sa place \n",(int)i);
     nbClientsAttente --;
-    pthread_mutex_unlock(&mutex);
+    pthread_mutex_unlock(&mutex_attenteClient);
     
 }
 
@@ -57,7 +57,8 @@ void * fonc_caisse(void *i)
 
 void * fonc_client(void *i)
 {
-    Client((int)i);
+    int numClient = (int)i;
+    AcheterBillet(numClient);
     
     /* temps de vente */
     //usleep(200000);
@@ -68,7 +69,7 @@ void * fonc_client(void *i)
 int main()
 {
     int num;
-    pthread_mutex_init(&mutex, NULL);
+    pthread_mutex_init(&mutex_attenteClient, NULL);
     pthread_cond_init(&attendre, NULL);
     pthread_cond_init(&dormir,NULL);
     
