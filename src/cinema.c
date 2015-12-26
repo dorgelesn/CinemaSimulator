@@ -13,14 +13,33 @@ int main()
     pthread_cond_init(&attendre, NULL);
     pthread_cond_init(&dormir,NULL);
     
-    // creation des caisses
+    // creation des salles /!\ fuite memoire
+    
+    int numSalle;
+    char *lesfilms[5]={"toto au cine","starw wars","maze runner","spectre","un avion se crash"};
+    for(numSalle =1; numSalle <= NBSalles; numSalle++){
+            SalleStruct * uneSalle = malloc(sizeof(SalleStruct));
+            uneSalle->film=lesfilms[numSalle-1];
+            uneSalle->numero=numSalle;
+            uneSalle->CAPACITE = 120;
+            lesSalles[numSalle-1] = uneSalle;
+    }
+    
+    int testt;
+    
+    for(testt=0; testt < NBSalles; testt++){
+     printf("Salle n° %d film %s CAPACITE %d \n",lesSalles[testt]->numero, lesSalles[testt]->film, lesSalles[testt]->CAPACITE);   
+        
+    }
+    
+    // creation des caisses /!\ fuite memoire
     for(num=0;num<Nbcaisses;num++){
         argStruct *numCaisse = malloc(sizeof(*numCaisse));
         numCaisse->num = num;
         pthread_create(tid+num,0,(void *(*)())fonc_caisse,numCaisse);
     }
     
-    //creation des threads clients
+    //creation des threads clients /!\ fuite memoire
     for(num=Nbcaisses;num<(NbClients+Nbcaisses)/2;num ++){
         argStruct *numClient = malloc(sizeof(*numClient));
         numClient->num = num;

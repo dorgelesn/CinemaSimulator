@@ -1,5 +1,6 @@
 #include "../include/global.h"
 
+
 void VendreBillet(int numCaisse){
     
     pthread_mutex_lock(&mutex_attenteClient);
