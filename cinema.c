@@ -2,8 +2,14 @@
 
 #include <stdio.h>
 #include <pthread.h>
+#include <unistd.h>
+#include <stdlib.h>
 #define Nbcaisses 8 
 #define NbClients 1000
+
+typedef struct argStruct{
+    int num;
+}argStruct;
 
 
 pthread_t tid[NbClients+Nbcaisses];
@@ -48,21 +54,21 @@ void AcheterBillet(int i)
 
 void * fonc_caisse(void *i)
 {                          
-    
+    argStruct *arg = i;
     while (1)  {
-        VendreBillet((int)i);
+        VendreBillet(arg->num);
         usleep(200000);
     }
 }
 
 void * fonc_client(void *i)
 {
-    int numClient = (int)i;
-    AcheterBillet(numClient);
+    argStruct *arg = i;
+    AcheterBillet(arg->num);
     
     /* temps de vente */
     //usleep(200000);
-    printf("Le client %d à acheté son billet auprès d'une caissière\n", (int) i);
+    printf("Le client %d à acheté son billet auprès d'une caissière\n", arg->num);
 }
 
 
@@ -74,15 +80,24 @@ int main()
     pthread_cond_init(&dormir,NULL);
     
     // creation des caisses
-    for(num=0;num<Nbcaisses;num++)
-        pthread_create(tid+num,0,(void *(*)())fonc_caisse,(void*)num);
+    for(num=0;num<Nbcaisses;num++){
+        argStruct *numCaisse = malloc(sizeof(*numCaisse));
+        numCaisse->num = num;
+        pthread_create(tid+num,0,(void *(*)())fonc_caisse,numCaisse);
+    }
     
     //creation des threads clients
-    for(num=Nbcaisses;num<(NbClients+Nbcaisses)/2;num ++)
-        pthread_create(tid+num,0,(void *(*)())fonc_client,(void*)num);
+    for(num=Nbcaisses;num<(NbClients+Nbcaisses)/2;num ++){
+        argStruct *numClient = malloc(sizeof(*numClient));
+        numClient->num = num;
+        pthread_create(tid+num,0,(void *(*)())fonc_client,numClient);
+    }
     sleep(20);
-    for(num=(NbClients+Nbcaisses)/2;num<(NbClients+Nbcaisses);num++)
-        pthread_create(tid+num,0,(void *(*)())fonc_client,(void*)num);
+    for(num=(NbClients+Nbcaisses)/2;num<(NbClients+Nbcaisses);num++){
+        argStruct *numClient = malloc(sizeof(*numClient));
+        numClient->num = num;
+        pthread_create(tid+num,0,(void *(*)())fonc_client,numClient);
+    }
     //attend la fin de toutes les threads clients
     for(num=0;num<NbClients+Nbcaisses;num ++)
         pthread_join(tid[num],NULL);
