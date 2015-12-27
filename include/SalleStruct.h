@@ -1,6 +1,6 @@
 typedef struct SalleStruct{
     int CAPACITE;
     int NBPersonnes;
-    char* film;
+    FilmStruct * film;
     int numero;
 }SalleStruct;

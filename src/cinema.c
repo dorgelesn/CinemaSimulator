@@ -21,10 +21,28 @@ int main()
     // creation des salles /!\ fuite memoire
     
     int numSalle;
-    char *lesfilms[5]={"toto au cine","starw wars","maze runner","spectre","un avion se crash"};
+    char *nom[5]={"toto au cine","starw wars","maze runner","spectre","un avion se crash"};
+    char *genres[5]={"comedie","science-fiction","aventure","action","drame"};
+    int duree[5]={120,90,180,111,10};
+    int horaire[5]={1,2,1,2,1};
+    int pegi[5]={3,12,12,16,18};
+    
+    int i;
+    for(i = 0; i<5; i++)
+    {
+        FilmStruct * unFilm = malloc(sizeof(FilmStruct));
+        unFilm->titre = nom[i];
+        unFilm->genre = genres[i];
+        unFilm->duree = duree[i];
+        unFilm->horaire = horaire[i];
+        unFilm->pegi = pegi[i];
+        lesFilms[i] = unFilm;
+        
+    }
+    
     for(numSalle =1; numSalle <= NBSalles; numSalle++){
             SalleStruct * uneSalle = malloc(sizeof(SalleStruct));
-            uneSalle->film=lesfilms[numSalle-1];
+            uneSalle->film=lesFilms[numSalle-1];
             uneSalle->numero=numSalle;
             uneSalle->CAPACITE = 120;
             lesSalles[numSalle-1] = uneSalle;
@@ -33,7 +51,7 @@ int main()
     int testt;
     
     for(testt=0; testt < NBSalles; testt++){
-     printf("Salle n° %d film %s CAPACITE %d \n",lesSalles[testt]->numero, lesSalles[testt]->film, lesSalles[testt]->CAPACITE);   
+     printf("Salle n° %d film %s CAPACITE %d \n",lesSalles[testt]->numero, (lesSalles[testt]->film)->titre, lesSalles[testt]->CAPACITE);   
         
     }
     
@@ -62,7 +80,7 @@ int main()
     printf("#########################################\n");
     printf("appels caisse %d\n",nbAppelCaisse);
     for(testt=0; testt < NBSalles; testt++){
-     printf("Salle n° %d film %s CAPACITE %d NBPersonnes %d\n",lesSalles[testt]->numero, lesSalles[testt]->film, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
+     printf("Salle n° %d film %s CAPACITE %d NBPersonnes %d\n",lesSalles[testt]->numero, lesSalles[testt]->film->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
         
     }
     printf("#########################################\n");
@@ -77,7 +95,7 @@ int main()
     printf("#########################################\n");
     printf("appels caisse %d\n",nbAppelCaisse);
     for(testt=0; testt < NBSalles; testt++){
-     printf("Salle n° %d film %s CAPACITE %d NBPersonnes %d\n",lesSalles[testt]->numero, lesSalles[testt]->film, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
+     printf("Salle n° %d film %s CAPACITE %d NBPersonnes %d\n",lesSalles[testt]->numero, lesSalles[testt]->film->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
         
     }
     printf("#########################################\n");
