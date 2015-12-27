@@ -33,10 +33,8 @@ void AcheterBilletInternet(int i)
 {
     
     pthread_mutex_lock(&mutex_attenteClient);
-    nbClientsAttente++;
     printf("Le client %d fait son achat sur internet \n",i);
     choisirFilm(i);    
-    nbClientsAttente --;
     pthread_mutex_unlock(&mutex_attenteClient);
     
 }
@@ -74,7 +72,7 @@ void AcheterBilletAuto(int i)
 //le client choisis un film, si il n'y a plus de place il y a 80 % de chance
 // pour que le client quitte le cinema, sinon il choisis un autre film.
 
-void choisirFilm(int i)
+int choisirFilm(int i)
 {
     
     int film = rand()%(NBFilms-0) +0;
@@ -93,6 +91,7 @@ void choisirFilm(int i)
         }
         else{
             printf("le client %d sort du cinema car il n'y avait plus de place pour son film\n",i);
+            return 1;
         }
             
         
@@ -102,10 +101,9 @@ void choisirFilm(int i)
         printf("client %d à acheté sa place pour le film %s dans la salle %d à la place %d\n",i,laSalle->film->titre,laSalle->numero,laSalle->NBPersonnes+1);
         //Ajouter un mutex pour la capaacité des salles quand il y aura 3 moyens de commander les billets 
         (laSalle->NBPersonnes)++;
-        
+        return 1;
     }
-    
-    
+    return 1;
 }
 
 SalleStruct* choixSalle(FilmStruct * unFilm)

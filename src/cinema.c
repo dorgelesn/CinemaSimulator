@@ -9,12 +9,16 @@ int main()
     nbClientsAttente=0;
     nbClientsAttenteAuto=0;
     nbAppelCaisse=0;
+    nbAbonneeAttente=0;
+    nbAbonnee=0;
+    nbAbonneeAcheteBillet=0;
     int num;
     pthread_mutex_init(&mutex_attenteClient, NULL);
     pthread_cond_init(&attendre, NULL);
     pthread_cond_init(&dormir,NULL);
     pthread_cond_init(&attendreAuto, NULL);
     pthread_cond_init(&dormirAuto,NULL);
+    pthread_cond_init(&attendreAbonnee,NULL);
     
     srand(time(NULL));
     
@@ -50,7 +54,7 @@ int main()
     
     int testt;
     
-    lesSalles[0]->film = lesSalles[1]->film;
+    //lesSalles[0]->film = lesSalles[1]->film;
     //  printf("adresses %d %d\n",lesSalles[0]->film, lesSalles[1]->film);
     
     for(testt=0; testt < NBSalles; testt++){
@@ -77,7 +81,12 @@ int main()
     for(num=Nbcaisses+NbcaissesAuto;num<(NbClients+Nbcaisses+NbcaissesAuto)/2;num ++){
         argStruct *numClient = malloc(sizeof(*numClient));
         numClient->num = num-Nbcaisses-NbcaissesAuto;
-        pthread_create(tid+num,0,(void *(*)())fonc_client,numClient);
+        
+        int rng = rand()%(100-0) +0;
+        if(rng<PourcentAbonnee)
+            pthread_create(tid+num,0,(void *(*)())fonc_abonnee,numClient);
+        else        
+            pthread_create(tid+num,0,(void *(*)())fonc_client,numClient);
     }
     sleep(10);
     printf("#########################################\n");
@@ -86,6 +95,7 @@ int main()
      printf("Salle n° %d film %s CAPACITE %d NBPersonnes %d\n",lesSalles[testt]->numero, lesSalles[testt]->film->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
         
     }
+    printf("Abonnees :\n sont venus : %d\nOn eu leur billet :%d\n ",nbAbonnee, nbAbonneeAcheteBillet);
     printf("#########################################\n");
     sleep(10);
     for(num=(NbClients+Nbcaisses+NbcaissesAuto)/2;num<(NbClients+Nbcaisses+NbcaissesAuto);num++){
@@ -101,6 +111,7 @@ int main()
      printf("Salle n° %d film %s CAPACITE %d NBPersonnes %d\n",lesSalles[testt]->numero, lesSalles[testt]->film->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
         
     }
+    printf("Abonnees :\n sont venus : %d\nOn eu leur billet :%d\n ",nbAbonnee, nbAbonneeAcheteBillet);
     printf("#########################################\n");
     
     //attend la fin de toutes les threads clients

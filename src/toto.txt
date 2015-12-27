@@ -1,0 +1,1300 @@
+Salle n° 1 film starw wars CAPACITE 120 
+Salle n° 2 film starw wars CAPACITE 120 
+Salle n° 3 film maze runner CAPACITE 120 
+Salle n° 4 film spectre CAPACITE 120 
+Salle n° 5 film un avion se crash CAPACITE 120 
+pas de clients à la caisse auto n° 0 
+pas de clients à la caisse auto n° 1 
+pas de clients à la caisse numero 0 
+appels caisse 0
+pas de clients à la caisse auto n° 2 
+pas de clients à la caisse numero 1 
+appels caisse 0
+pas de clients à la caisse numero 2 
+appels caisse 0
+pas de clients à la caisse numero 3 
+appels caisse 0
+pas de clients à la caisse numero 6 
+appels caisse 0
+pas de clients à la caisse numero 5 
+appels caisse 0
+pas de clients à la caisse numero 7 
+appels caisse 0
+pas de clients à la caisse numero 4 
+appels caisse 0
+Le client 0 arrive 
+la caissière n° 0 appelle un client !
+client 0 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 0 va essayer de voir un autre film
+client 0 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 0 sort du cinema car il n'y avait plus de place pour son film
+Le client 0 à acheté son billet auprès d'une caissière
+Le client 1 arrive 
+Le client 2 arrive en caisse automatique
+la caissière n° 1 appelle un client !
+Un client Arrive à la caisse automatique n° 0  !
+client 2 veut voir le film un avion se crash
+client 2 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 1
+client 1 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 1 sort du cinema car il n'y avait plus de place pour son film
+Le client 2 à acheté son billet à la caisse automatique
+Le client 1 à acheté son billet auprès d'une caissière
+Le client 4 arrive en caisse automatique
+Le client 6 fait son achat sur internet 
+client 6 veut voir le film spectre
+client 6 à acheté sa place pour le film spectre dans la salle 4 à la place 1
+Un client Arrive à la caisse automatique n° 1  !
+Le client 6 à acheté son billet sur internet
+Le client 5 arrive en caisse automatique
+Un client Arrive à la caisse automatique n° 2  !
+Le client 3 arrive en caisse automatique
+Le client 7 arrive 
+la caissière n° 2 appelle un client !
+client 7 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 7 sort du cinema car il n'y avait plus de place pour son film
+Le client 9 arrive en caisse automatique
+Le client 7 à acheté son billet auprès d'une caissière
+Le client 8 arrive 
+la caissière n° 3 appelle un client !
+client 8 veut voir le film starw wars
+client 8 à acheté sa place pour le film starw wars dans la salle 1 à la place 1
+client 5 veut voir le film toto au cine
+Le client 8 à acheté son billet auprès d'une caissière
+il n'y a plus de place pour le film starw wars
+le client 5 sort du cinema car il n'y avait plus de place pour son film
+Le client 5 à acheté son billet à la caisse automatique
+client 4 veut voir le film spectre
+client 4 à acheté sa place pour le film spectre dans la salle 4 à la place 2
+Le client 4 à acheté son billet à la caisse automatique
+Le client 10 arrive en caisse automatique
+Le client 11 arrive 
+la caissière n° 6 appelle un client !
+client 11 veut voir le film maze runner
+client 11 à acheté sa place pour le film maze runner dans la salle 3 à la place 1
+Le client 11 à acheté son billet auprès d'une caissière
+Le client 12 arrive 
+la caissière n° 5 appelle un client !
+client 12 veut voir le film starw wars
+client 12 à acheté sa place pour le film starw wars dans la salle 1 à la place 2
+L'abonnee 12 à acheté son billet auprès d'une caissière
+Le client 13 arrive en caisse automatique
+Le client 14 arrive 
+la caissière n° 7 appelle un client !
+client 14 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 14 sort du cinema car il n'y avait plus de place pour son film
+L'abonnee 14 à acheté son billet auprès d'une caissière
+Le client 15 arrive 
+la caissière n° 4 appelle un client !
+client 15 veut voir le film un avion se crash
+client 15 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 2
+Le client 15 à acheté son billet auprès d'une caissière
+Le client 17 arrive 
+Le client 18 arrive en caisse automatique
+Le client 19 fait son achat sur internet 
+client 19 veut voir le film maze runner
+client 19 à acheté sa place pour le film maze runner dans la salle 3 à la place 2
+Le client 19 à acheté son billet sur internet
+Le client 20 arrive en caisse automatique
+Le client 16 fait son achat sur internet 
+client 16 veut voir le film maze runner
+client 16 à acheté sa place pour le film maze runner dans la salle 3 à la place 3
+Le client 16 à acheté son billet sur internet
+Le client 21 arrive en caisse automatique
+Le client 22 arrive en caisse automatique
+Le client 23 arrive 
+Le client 25 arrive 
+Le client 24 fait son achat sur internet 
+client 24 veut voir le film un avion se crash
+client 24 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 3
+Le client 24 à acheté son billet sur internet
+Le client 26 arrive en caisse automatique
+Le client 27 arrive 
+Le client 28 arrive 
+Le client 30 arrive 
+Le client 29 arrive en caisse automatique
+Le client 31 arrive 
+Le client 32 fait son achat sur internet 
+client 32 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 32 sort du cinema car il n'y avait plus de place pour son film
+Le client 32 à acheté son billet sur internet
+Le client 33 arrive 
+Le client 35 arrive 
+Le client 34 arrive 
+Le client 36 arrive en caisse automatique
+Le client 37 arrive en caisse automatique
+Le client 38 fait son achat sur internet 
+client 38 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 38 sort du cinema car il n'y avait plus de place pour son film
+Le client 38 à acheté son billet sur internet
+Le client 39 arrive 
+Le client 40 arrive 
+Le client 41 fait son achat sur internet 
+client 41 veut voir le film maze runner
+client 41 à acheté sa place pour le film maze runner dans la salle 3 à la place 4
+Le client 41 à acheté son billet sur internet
+Le client 42 arrive 
+Le client 43 arrive 
+Le client 44 arrive en caisse automatique
+Le client 45 arrive en caisse automatique
+Le client 46 arrive en caisse automatique
+Le client 47 arrive 
+Le client 48 fait son achat sur internet 
+client 48 veut voir le film maze runner
+client 48 à acheté sa place pour le film maze runner dans la salle 3 à la place 5
+Le client 48 à acheté son billet sur internet
+Le client 49 arrive en caisse automatique
+Le client 50 arrive 
+Le client 51 arrive en caisse automatique
+Le client 52 arrive en caisse automatique
+Le client 53 arrive 
+Le client 54 arrive 
+Le client 55 arrive en caisse automatique
+Le client 56 arrive 
+Le client 57 arrive 
+Le client 58 arrive en caisse automatique
+Le client 59 fait son achat sur internet 
+client 59 veut voir le film maze runner
+client 59 à acheté sa place pour le film maze runner dans la salle 3 à la place 6
+Le client 59 à acheté son billet sur internet
+Le client 60 fait son achat sur internet 
+client 60 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 60 va essayer de voir un autre film
+client 60 veut voir le film spectre
+client 60 à acheté sa place pour le film spectre dans la salle 4 à la place 3
+Le client 60 à acheté son billet sur internet
+Le client 61 arrive 
+Le client 62 arrive 
+Le client 63 arrive en caisse automatique
+Le client 64 arrive en caisse automatique
+Le client 65 arrive en caisse automatique
+Le client 66 arrive 
+Le client 67 arrive en caisse automatique
+Le client 68 arrive 
+Le client 69 arrive 
+Le client 70 fait son achat sur internet 
+client 70 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 70 va essayer de voir un autre film
+client 70 veut voir le film starw wars
+client 70 à acheté sa place pour le film starw wars dans la salle 1 à la place 3
+Le client 70 à acheté son billet sur internet
+Le client 71 arrive 
+Le client 72 arrive 
+Le client 73 arrive 
+Le client 74 fait son achat sur internet 
+client 74 veut voir le film maze runner
+client 74 à acheté sa place pour le film maze runner dans la salle 3 à la place 7
+Le client 74 à acheté son billet sur internet
+Le client 75 arrive 
+Le client 77 fait son achat sur internet 
+client 77 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 77 sort du cinema car il n'y avait plus de place pour son film
+Le client 77 à acheté son billet sur internet
+Le client 76 arrive 
+Le client 78 arrive en caisse automatique
+Le client 79 arrive 
+Le client 80 arrive 
+Le client 81 fait son achat sur internet 
+client 81 veut voir le film maze runner
+client 81 à acheté sa place pour le film maze runner dans la salle 3 à la place 8
+Le client 81 à acheté son billet sur internet
+Le client 82 fait son achat sur internet 
+client 82 veut voir le film un avion se crash
+client 82 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 4
+Le client 82 à acheté son billet sur internet
+Le client 83 fait son achat sur internet 
+client 83 veut voir le film starw wars
+client 83 à acheté sa place pour le film starw wars dans la salle 1 à la place 4
+Le client 83 à acheté son billet sur internet
+Le client 84 arrive 
+Le client 85 arrive en caisse automatique
+Le client 86 arrive 
+Le client 87 arrive en caisse automatique
+Le client 88 arrive en caisse automatique
+Le client 89 arrive 
+Le client 90 arrive 
+Le client 91 arrive 
+Le client 92 arrive 
+Le client 93 fait son achat sur internet 
+client 93 veut voir le film maze runner
+client 93 à acheté sa place pour le film maze runner dans la salle 3 à la place 9
+Le client 93 à acheté son billet sur internet
+Le client 94 arrive 
+Le client 95 arrive 
+Le client 96 fait son achat sur internet 
+client 96 veut voir le film spectre
+client 96 à acheté sa place pour le film spectre dans la salle 4 à la place 4
+Le client 96 à acheté son billet sur internet
+Le client 97 arrive en caisse automatique
+Le client 98 arrive 
+Le client 99 fait son achat sur internet 
+client 99 veut voir le film un avion se crash
+client 99 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 5
+L'abonnee 99 à acheté son billet sur internet
+Le client 100 arrive 
+Le client 101 arrive 
+Le client 102 fait son achat sur internet 
+client 102 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 102 sort du cinema car il n'y avait plus de place pour son film
+Le client 102 à acheté son billet sur internet
+Le client 103 fait son achat sur internet 
+client 103 veut voir le film un avion se crash
+client 103 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 6
+Le client 103 à acheté son billet sur internet
+Le client 104 arrive en caisse automatique
+Le client 105 arrive 
+Le client 106 fait son achat sur internet 
+client 106 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 106 sort du cinema car il n'y avait plus de place pour son film
+Le client 106 à acheté son billet sur internet
+Le client 107 arrive 
+Le client 108 fait son achat sur internet 
+client 108 veut voir le film un avion se crash
+client 108 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 7
+Le client 108 à acheté son billet sur internet
+Le client 109 fait son achat sur internet 
+client 109 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 109 sort du cinema car il n'y avait plus de place pour son film
+Le client 109 à acheté son billet sur internet
+Le client 110 arrive en caisse automatique
+Le client 111 arrive 
+Le client 112 arrive en caisse automatique
+Le client 113 arrive en caisse automatique
+Le client 114 arrive en caisse automatique
+Le client 115 arrive 
+Le client 116 arrive 
+Le client 117 arrive 
+Le client 118 fait son achat sur internet 
+client 118 veut voir le film maze runner
+client 118 à acheté sa place pour le film maze runner dans la salle 3 à la place 10
+Le client 118 à acheté son billet sur internet
+Le client 119 arrive 
+Le client 120 arrive en caisse automatique
+Le client 122 fait son achat sur internet 
+client 122 veut voir le film starw wars
+client 122 à acheté sa place pour le film starw wars dans la salle 1 à la place 5
+Le client 122 à acheté son billet sur internet
+Le client 121 fait son achat sur internet 
+client 121 veut voir le film un avion se crash
+client 121 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 8
+Le client 121 à acheté son billet sur internet
+Le client 123 fait son achat sur internet 
+client 123 veut voir le film maze runner
+client 123 à acheté sa place pour le film maze runner dans la salle 3 à la place 11
+L'abonnee 123 à acheté son billet sur internet
+Le client 124 arrive 
+Le client 125 arrive 
+Le client 126 arrive 
+Le client 127 arrive 
+Le client 128 fait son achat sur internet 
+client 128 veut voir le film spectre
+client 128 à acheté sa place pour le film spectre dans la salle 4 à la place 5
+L'abonnee 128 à acheté son billet sur internet
+Le client 129 arrive en caisse automatique
+Le client 130 arrive 
+Le client 131 fait son achat sur internet 
+client 131 veut voir le film maze runner
+client 131 à acheté sa place pour le film maze runner dans la salle 3 à la place 12
+Le client 131 à acheté son billet sur internet
+Le client 132 arrive en caisse automatique
+Le client 133 arrive 
+Le client 134 arrive 
+Le client 135 arrive 
+Le client 136 arrive en caisse automatique
+Le client 137 arrive en caisse automatique
+Le client 138 fait son achat sur internet 
+client 138 veut voir le film maze runner
+client 138 à acheté sa place pour le film maze runner dans la salle 3 à la place 13
+Le client 138 à acheté son billet sur internet
+Le client 139 arrive 
+Le client 140 arrive 
+Le client 141 arrive en caisse automatique
+Le client 142 fait son achat sur internet 
+client 142 veut voir le film un avion se crash
+client 142 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 9
+Le client 142 à acheté son billet sur internet
+Le client 143 fait son achat sur internet 
+client 143 veut voir le film spectre
+client 143 à acheté sa place pour le film spectre dans la salle 4 à la place 6
+Le client 143 à acheté son billet sur internet
+Le client 144 fait son achat sur internet 
+client 144 veut voir le film starw wars
+client 144 à acheté sa place pour le film starw wars dans la salle 1 à la place 6
+Le client 144 à acheté son billet sur internet
+Le client 145 arrive 
+Le client 146 arrive 
+Le client 147 arrive 
+Le client 148 arrive 
+Le client 149 arrive 
+Le client 150 arrive 
+Le client 151 fait son achat sur internet 
+client 151 veut voir le film maze runner
+client 151 à acheté sa place pour le film maze runner dans la salle 3 à la place 14
+Le client 151 à acheté son billet sur internet
+Le client 152 arrive en caisse automatique
+Le client 153 arrive en caisse automatique
+Le client 154 arrive 
+Le client 155 fait son achat sur internet 
+client 155 veut voir le film starw wars
+client 155 à acheté sa place pour le film starw wars dans la salle 1 à la place 7
+Le client 155 à acheté son billet sur internet
+Le client 156 arrive 
+Le client 157 arrive en caisse automatique
+Le client 158 arrive 
+Le client 159 arrive en caisse automatique
+Le client 160 arrive en caisse automatique
+Le client 161 fait son achat sur internet 
+client 161 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 161 sort du cinema car il n'y avait plus de place pour son film
+Le client 161 à acheté son billet sur internet
+Le client 162 arrive en caisse automatique
+Le client 163 arrive en caisse automatique
+Le client 164 arrive 
+Le client 165 fait son achat sur internet 
+client 165 veut voir le film un avion se crash
+client 165 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 10
+Le client 165 à acheté son billet sur internet
+Le client 166 arrive en caisse automatique
+Le client 167 arrive 
+Le client 168 arrive 
+Le client 169 arrive en caisse automatique
+Le client 170 fait son achat sur internet 
+client 170 veut voir le film starw wars
+client 170 à acheté sa place pour le film starw wars dans la salle 1 à la place 8
+Le client 170 à acheté son billet sur internet
+Le client 172 arrive 
+Le client 171 fait son achat sur internet 
+client 171 veut voir le film un avion se crash
+client 171 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 11
+Le client 171 à acheté son billet sur internet
+Le client 173 arrive 
+Le client 174 arrive en caisse automatique
+Le client 175 arrive en caisse automatique
+Le client 176 arrive 
+Le client 177 fait son achat sur internet 
+client 177 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 177 sort du cinema car il n'y avait plus de place pour son film
+Le client 177 à acheté son billet sur internet
+Le client 178 fait son achat sur internet 
+client 178 veut voir le film maze runner
+client 178 à acheté sa place pour le film maze runner dans la salle 3 à la place 15
+Le client 178 à acheté son billet sur internet
+Le client 179 arrive en caisse automatique
+Le client 180 arrive en caisse automatique
+Le client 181 arrive 
+Le client 182 arrive 
+Le client 183 arrive 
+Le client 184 arrive en caisse automatique
+Le client 185 arrive 
+Le client 186 arrive 
+Le client 187 arrive 
+Le client 188 fait son achat sur internet 
+client 188 veut voir le film spectre
+client 188 à acheté sa place pour le film spectre dans la salle 4 à la place 7
+Le client 188 à acheté son billet sur internet
+Le client 189 arrive 
+Le client 190 arrive 
+Le client 191 arrive 
+Le client 192 fait son achat sur internet 
+client 192 veut voir le film maze runner
+client 192 à acheté sa place pour le film maze runner dans la salle 3 à la place 16
+Le client 192 à acheté son billet sur internet
+Le client 193 arrive 
+Le client 194 fait son achat sur internet 
+client 194 veut voir le film starw wars
+client 194 à acheté sa place pour le film starw wars dans la salle 1 à la place 9
+Le client 194 à acheté son billet sur internet
+Le client 195 arrive 
+Le client 196 arrive en caisse automatique
+Le client 197 arrive 
+Le client 198 arrive 
+Le client 199 fait son achat sur internet 
+client 199 veut voir le film spectre
+client 199 à acheté sa place pour le film spectre dans la salle 4 à la place 8
+Le client 199 à acheté son billet sur internet
+Le client 200 arrive en caisse automatique
+Le client 201 arrive en caisse automatique
+Le client 202 arrive en caisse automatique
+Le client 203 arrive 
+Le client 204 arrive 
+Le client 205 fait son achat sur internet 
+client 205 veut voir le film spectre
+client 205 à acheté sa place pour le film spectre dans la salle 4 à la place 9
+Le client 205 à acheté son billet sur internet
+Le client 206 arrive 
+Le client 207 arrive en caisse automatique
+Le client 208 fait son achat sur internet 
+client 208 veut voir le film maze runner
+client 208 à acheté sa place pour le film maze runner dans la salle 3 à la place 17
+Le client 208 à acheté son billet sur internet
+Le client 209 arrive 
+Le client 210 fait son achat sur internet 
+client 210 veut voir le film maze runner
+client 210 à acheté sa place pour le film maze runner dans la salle 3 à la place 18
+Le client 210 à acheté son billet sur internet
+Le client 211 arrive 
+Le client 212 arrive 
+Le client 213 fait son achat sur internet 
+client 213 veut voir le film spectre
+client 213 à acheté sa place pour le film spectre dans la salle 4 à la place 10
+Le client 213 à acheté son billet sur internet
+Le client 214 arrive en caisse automatique
+Le client 215 fait son achat sur internet 
+client 215 veut voir le film spectre
+client 215 à acheté sa place pour le film spectre dans la salle 4 à la place 11
+Le client 215 à acheté son billet sur internet
+Le client 217 fait son achat sur internet 
+client 217 veut voir le film starw wars
+client 217 à acheté sa place pour le film starw wars dans la salle 1 à la place 10
+Le client 217 à acheté son billet sur internet
+Le client 216 fait son achat sur internet 
+client 216 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 216 va essayer de voir un autre film
+client 216 veut voir le film maze runner
+client 216 à acheté sa place pour le film maze runner dans la salle 3 à la place 19
+Le client 216 à acheté son billet sur internet
+Le client 218 fait son achat sur internet 
+client 218 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 218 sort du cinema car il n'y avait plus de place pour son film
+Le client 218 à acheté son billet sur internet
+Le client 219 arrive en caisse automatique
+Le client 220 arrive 
+Le client 221 arrive en caisse automatique
+Le client 222 arrive 
+Le client 223 arrive 
+Le client 224 arrive 
+Le client 225 fait son achat sur internet 
+client 225 veut voir le film un avion se crash
+client 225 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 12
+Le client 225 à acheté son billet sur internet
+Le client 226 arrive en caisse automatique
+Le client 227 arrive en caisse automatique
+Le client 229 arrive 
+Le client 228 arrive en caisse automatique
+Le client 230 arrive 
+Le client 231 fait son achat sur internet 
+client 231 veut voir le film starw wars
+client 231 à acheté sa place pour le film starw wars dans la salle 1 à la place 11
+Le client 231 à acheté son billet sur internet
+Le client 233 arrive en caisse automatique
+Le client 232 arrive 
+Le client 234 arrive 
+Le client 235 fait son achat sur internet 
+client 235 veut voir le film spectre
+client 235 à acheté sa place pour le film spectre dans la salle 4 à la place 12
+Le client 235 à acheté son billet sur internet
+Le client 237 arrive en caisse automatique
+Le client 236 arrive en caisse automatique
+Le client 238 arrive en caisse automatique
+Le client 239 arrive en caisse automatique
+Le client 240 arrive 
+Le client 241 arrive en caisse automatique
+Le client 242 fait son achat sur internet 
+client 242 veut voir le film spectre
+client 242 à acheté sa place pour le film spectre dans la salle 4 à la place 13
+Le client 242 à acheté son billet sur internet
+Le client 243 fait son achat sur internet 
+client 243 veut voir le film starw wars
+client 243 à acheté sa place pour le film starw wars dans la salle 1 à la place 12
+Le client 243 à acheté son billet sur internet
+Le client 244 arrive 
+Le client 245 fait son achat sur internet 
+client 245 veut voir le film maze runner
+client 245 à acheté sa place pour le film maze runner dans la salle 3 à la place 20
+Le client 245 à acheté son billet sur internet
+Le client 246 arrive 
+Le client 247 arrive en caisse automatique
+Le client 249 arrive 
+Le client 248 arrive 
+Le client 250 arrive en caisse automatique
+Le client 251 fait son achat sur internet 
+client 251 veut voir le film maze runner
+client 251 à acheté sa place pour le film maze runner dans la salle 3 à la place 21
+Le client 251 à acheté son billet sur internet
+Le client 252 arrive 
+Le client 253 arrive en caisse automatique
+Le client 254 arrive 
+Le client 255 arrive 
+Le client 256 arrive en caisse automatique
+Le client 257 arrive en caisse automatique
+Le client 258 arrive en caisse automatique
+Le client 259 arrive 
+Le client 260 arrive en caisse automatique
+Le client 261 fait son achat sur internet 
+client 261 veut voir le film maze runner
+client 261 à acheté sa place pour le film maze runner dans la salle 3 à la place 22
+Le client 261 à acheté son billet sur internet
+Le client 262 arrive 
+Le client 263 arrive 
+Le client 264 arrive 
+Le client 265 fait son achat sur internet 
+client 265 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 265 va essayer de voir un autre film
+client 265 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 265 sort du cinema car il n'y avait plus de place pour son film
+Le client 265 à acheté son billet sur internet
+Le client 266 arrive 
+Le client 267 arrive 
+Le client 268 fait son achat sur internet 
+client 268 veut voir le film un avion se crash
+client 268 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 13
+Le client 268 à acheté son billet sur internet
+Le client 269 arrive 
+Le client 270 fait son achat sur internet 
+client 270 veut voir le film maze runner
+client 270 à acheté sa place pour le film maze runner dans la salle 3 à la place 23
+Le client 270 à acheté son billet sur internet
+Le client 271 arrive 
+Le client 272 arrive en caisse automatique
+Le client 274 arrive en caisse automatique
+Le client 273 arrive 
+Le client 275 fait son achat sur internet 
+client 275 veut voir le film un avion se crash
+client 275 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 14
+Le client 275 à acheté son billet sur internet
+Le client 276 arrive en caisse automatique
+Le client 277 fait son achat sur internet 
+client 277 veut voir le film starw wars
+client 277 à acheté sa place pour le film starw wars dans la salle 1 à la place 13
+Le client 277 à acheté son billet sur internet
+Le client 278 fait son achat sur internet 
+client 278 veut voir le film starw wars
+client 278 à acheté sa place pour le film starw wars dans la salle 1 à la place 14
+Le client 278 à acheté son billet sur internet
+Le client 279 arrive 
+Le client 280 arrive en caisse automatique
+Le client 281 arrive en caisse automatique
+Le client 282 fait son achat sur internet 
+client 282 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 282 sort du cinema car il n'y avait plus de place pour son film
+Le client 282 à acheté son billet sur internet
+Le client 283 arrive 
+Le client 284 fait son achat sur internet 
+client 284 veut voir le film un avion se crash
+client 284 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 15
+Le client 284 à acheté son billet sur internet
+Le client 286 arrive 
+Le client 285 arrive en caisse automatique
+Le client 287 arrive 
+Le client 288 arrive en caisse automatique
+Le client 289 arrive 
+Le client 290 arrive 
+Le client 291 fait son achat sur internet 
+client 291 veut voir le film starw wars
+client 291 à acheté sa place pour le film starw wars dans la salle 1 à la place 15
+Le client 291 à acheté son billet sur internet
+Le client 292 fait son achat sur internet 
+client 292 veut voir le film starw wars
+client 292 à acheté sa place pour le film starw wars dans la salle 1 à la place 16
+Le client 292 à acheté son billet sur internet
+Le client 293 fait son achat sur internet 
+client 293 veut voir le film spectre
+client 293 à acheté sa place pour le film spectre dans la salle 4 à la place 14
+Le client 293 à acheté son billet sur internet
+Le client 294 arrive 
+Le client 295 arrive en caisse automatique
+Le client 296 arrive en caisse automatique
+Le client 297 arrive en caisse automatique
+Le client 298 fait son achat sur internet 
+client 298 veut voir le film maze runner
+client 298 à acheté sa place pour le film maze runner dans la salle 3 à la place 24
+Le client 298 à acheté son billet sur internet
+Le client 299 fait son achat sur internet 
+client 299 veut voir le film un avion se crash
+client 299 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 16
+Le client 299 à acheté son billet sur internet
+Le client 300 arrive en caisse automatique
+Le client 301 arrive 
+Le client 302 arrive 
+Le client 303 fait son achat sur internet 
+client 303 veut voir le film spectre
+client 303 à acheté sa place pour le film spectre dans la salle 4 à la place 15
+Le client 303 à acheté son billet sur internet
+Le client 304 arrive 
+Le client 305 arrive 
+Le client 306 fait son achat sur internet 
+client 306 veut voir le film spectre
+client 306 à acheté sa place pour le film spectre dans la salle 4 à la place 16
+Le client 306 à acheté son billet sur internet
+Le client 307 arrive en caisse automatique
+Le client 308 fait son achat sur internet 
+client 308 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 308 sort du cinema car il n'y avait plus de place pour son film
+Le client 308 à acheté son billet sur internet
+Le client 309 fait son achat sur internet 
+client 309 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 309 va essayer de voir un autre film
+client 309 veut voir le film spectre
+client 309 à acheté sa place pour le film spectre dans la salle 4 à la place 17
+Le client 309 à acheté son billet sur internet
+Le client 310 arrive 
+Le client 311 arrive 
+Le client 312 arrive 
+Le client 313 arrive en caisse automatique
+Le client 314 arrive en caisse automatique
+Le client 315 arrive en caisse automatique
+Le client 316 arrive 
+Le client 317 arrive 
+Le client 318 arrive en caisse automatique
+Le client 319 fait son achat sur internet 
+client 319 veut voir le film un avion se crash
+client 319 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 17
+Le client 319 à acheté son billet sur internet
+Le client 320 arrive 
+Le client 321 arrive 
+Le client 322 fait son achat sur internet 
+client 322 veut voir le film un avion se crash
+client 322 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 18
+Le client 322 à acheté son billet sur internet
+Le client 323 fait son achat sur internet 
+client 323 veut voir le film un avion se crash
+client 323 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 19
+Le client 323 à acheté son billet sur internet
+Le client 324 arrive en caisse automatique
+Le client 325 arrive 
+Le client 326 fait son achat sur internet 
+client 326 veut voir le film un avion se crash
+client 326 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 20
+Le client 326 à acheté son billet sur internet
+Le client 327 fait son achat sur internet 
+client 327 veut voir le film un avion se crash
+client 327 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 21
+L'abonnee 327 à acheté son billet sur internet
+Le client 328 arrive 
+Le client 329 arrive en caisse automatique
+Le client 330 arrive en caisse automatique
+Le client 331 fait son achat sur internet 
+client 331 veut voir le film maze runner
+client 331 à acheté sa place pour le film maze runner dans la salle 3 à la place 25
+Le client 331 à acheté son billet sur internet
+Le client 332 fait son achat sur internet 
+client 332 veut voir le film un avion se crash
+client 332 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 22
+Le client 332 à acheté son billet sur internet
+Le client 333 arrive 
+Le client 334 arrive 
+Le client 335 arrive en caisse automatique
+Le client 336 arrive 
+Le client 337 fait son achat sur internet 
+client 337 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 337 va essayer de voir un autre film
+client 337 veut voir le film spectre
+client 337 à acheté sa place pour le film spectre dans la salle 4 à la place 18
+Le client 337 à acheté son billet sur internet
+Le client 338 arrive en caisse automatique
+Le client 339 arrive en caisse automatique
+Le client 340 arrive 
+Le client 341 fait son achat sur internet 
+client 341 veut voir le film spectre
+client 341 à acheté sa place pour le film spectre dans la salle 4 à la place 19
+Le client 341 à acheté son billet sur internet
+Le client 342 arrive 
+Le client 343 arrive 
+Le client 344 fait son achat sur internet 
+client 344 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 344 sort du cinema car il n'y avait plus de place pour son film
+Le client 344 à acheté son billet sur internet
+Le client 345 fait son achat sur internet 
+client 345 veut voir le film maze runner
+client 345 à acheté sa place pour le film maze runner dans la salle 3 à la place 26
+Le client 345 à acheté son billet sur internet
+Le client 346 arrive en caisse automatique
+Le client 347 arrive 
+Le client 348 fait son achat sur internet 
+client 348 veut voir le film spectre
+client 348 à acheté sa place pour le film spectre dans la salle 4 à la place 20
+Le client 348 à acheté son billet sur internet
+Le client 349 arrive en caisse automatique
+Le client 350 fait son achat sur internet 
+client 350 veut voir le film spectre
+client 350 à acheté sa place pour le film spectre dans la salle 4 à la place 21
+Le client 350 à acheté son billet sur internet
+Le client 351 arrive en caisse automatique
+Le client 352 arrive 
+Le client 353 arrive en caisse automatique
+Le client 354 arrive en caisse automatique
+Le client 355 arrive 
+Le client 356 fait son achat sur internet 
+client 356 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 356 va essayer de voir un autre film
+client 356 veut voir le film starw wars
+client 356 à acheté sa place pour le film starw wars dans la salle 1 à la place 17
+Le client 356 à acheté son billet sur internet
+Le client 357 arrive en caisse automatique
+Le client 358 fait son achat sur internet 
+client 358 veut voir le film un avion se crash
+client 358 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 23
+Le client 358 à acheté son billet sur internet
+Le client 359 arrive 
+Le client 360 arrive 
+Le client 361 arrive 
+Le client 362 fait son achat sur internet 
+client 362 veut voir le film un avion se crash
+client 362 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 24
+Le client 362 à acheté son billet sur internet
+Le client 363 arrive en caisse automatique
+Le client 364 arrive 
+Le client 365 arrive en caisse automatique
+Le client 366 arrive en caisse automatique
+Le client 367 fait son achat sur internet 
+client 367 veut voir le film spectre
+client 367 à acheté sa place pour le film spectre dans la salle 4 à la place 22
+Le client 367 à acheté son billet sur internet
+Le client 368 arrive en caisse automatique
+Le client 369 arrive en caisse automatique
+Le client 370 fait son achat sur internet 
+client 370 veut voir le film maze runner
+client 370 à acheté sa place pour le film maze runner dans la salle 3 à la place 27
+Le client 370 à acheté son billet sur internet
+Le client 371 fait son achat sur internet 
+client 371 veut voir le film maze runner
+client 371 à acheté sa place pour le film maze runner dans la salle 3 à la place 28
+Le client 371 à acheté son billet sur internet
+Le client 372 fait son achat sur internet 
+client 372 veut voir le film starw wars
+client 372 à acheté sa place pour le film starw wars dans la salle 1 à la place 18
+Le client 372 à acheté son billet sur internet
+Le client 373 arrive 
+Le client 374 fait son achat sur internet 
+client 374 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 374 sort du cinema car il n'y avait plus de place pour son film
+Le client 374 à acheté son billet sur internet
+Le client 375 arrive en caisse automatique
+Le client 376 arrive en caisse automatique
+Le client 377 arrive en caisse automatique
+Le client 378 arrive en caisse automatique
+Le client 379 fait son achat sur internet 
+client 379 veut voir le film starw wars
+client 379 à acheté sa place pour le film starw wars dans la salle 1 à la place 19
+Le client 379 à acheté son billet sur internet
+Le client 380 arrive 
+Le client 381 fait son achat sur internet 
+client 381 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 381 sort du cinema car il n'y avait plus de place pour son film
+Le client 381 à acheté son billet sur internet
+Le client 382 fait son achat sur internet 
+client 382 veut voir le film spectre
+client 382 à acheté sa place pour le film spectre dans la salle 4 à la place 23
+Le client 382 à acheté son billet sur internet
+Le client 383 arrive 
+Le client 384 arrive 
+Le client 385 arrive en caisse automatique
+Le client 386 arrive 
+Le client 387 fait son achat sur internet 
+client 387 veut voir le film maze runner
+client 387 à acheté sa place pour le film maze runner dans la salle 3 à la place 29
+Le client 387 à acheté son billet sur internet
+Le client 388 arrive 
+Le client 389 arrive 
+Le client 390 arrive 
+Le client 391 arrive 
+Le client 392 arrive 
+Le client 393 arrive 
+Le client 394 fait son achat sur internet 
+client 394 veut voir le film un avion se crash
+client 394 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 25
+Le client 394 à acheté son billet sur internet
+Le client 395 arrive 
+Le client 396 fait son achat sur internet 
+client 396 veut voir le film spectre
+client 396 à acheté sa place pour le film spectre dans la salle 4 à la place 24
+Le client 396 à acheté son billet sur internet
+Le client 397 arrive en caisse automatique
+Le client 398 arrive 
+Le client 399 arrive 
+Le client 400 arrive en caisse automatique
+Le client 401 arrive 
+Le client 402 arrive en caisse automatique
+Le client 403 fait son achat sur internet 
+client 403 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 403 sort du cinema car il n'y avait plus de place pour son film
+Le client 403 à acheté son billet sur internet
+Le client 404 fait son achat sur internet 
+client 404 veut voir le film spectre
+client 404 à acheté sa place pour le film spectre dans la salle 4 à la place 25
+Le client 404 à acheté son billet sur internet
+Le client 405 arrive 
+Le client 406 arrive en caisse automatique
+Le client 407 arrive en caisse automatique
+Le client 408 fait son achat sur internet 
+client 408 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 408 sort du cinema car il n'y avait plus de place pour son film
+Le client 408 à acheté son billet sur internet
+Le client 409 arrive 
+Le client 410 fait son achat sur internet 
+client 410 veut voir le film spectre
+client 410 à acheté sa place pour le film spectre dans la salle 4 à la place 26
+Le client 410 à acheté son billet sur internet
+Le client 411 arrive 
+Le client 412 arrive 
+Le client 413 arrive 
+Le client 414 arrive 
+Le client 415 fait son achat sur internet 
+client 415 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 415 sort du cinema car il n'y avait plus de place pour son film
+Le client 415 à acheté son billet sur internet
+Le client 416 arrive 
+Le client 417 fait son achat sur internet 
+client 417 veut voir le film starw wars
+client 417 à acheté sa place pour le film starw wars dans la salle 1 à la place 20
+Le client 417 à acheté son billet sur internet
+Le client 418 arrive 
+Le client 419 arrive 
+Le client 420 fait son achat sur internet 
+client 420 veut voir le film starw wars
+client 420 à acheté sa place pour le film starw wars dans la salle 1 à la place 21
+Le client 420 à acheté son billet sur internet
+Le client 421 fait son achat sur internet 
+client 421 veut voir le film un avion se crash
+client 421 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 26
+Le client 421 à acheté son billet sur internet
+Le client 422 arrive en caisse automatique
+Le client 423 arrive 
+Le client 424 arrive 
+Le client 425 arrive 
+Le client 426 arrive 
+Le client 427 arrive en caisse automatique
+Le client 428 arrive en caisse automatique
+Le client 429 fait son achat sur internet 
+client 429 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 429 sort du cinema car il n'y avait plus de place pour son film
+Le client 429 à acheté son billet sur internet
+Le client 430 fait son achat sur internet 
+client 430 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 430 sort du cinema car il n'y avait plus de place pour son film
+Le client 430 à acheté son billet sur internet
+Le client 431 arrive en caisse automatique
+Le client 432 arrive en caisse automatique
+Le client 433 arrive 
+Le client 434 arrive en caisse automatique
+Le client 435 arrive en caisse automatique
+Le client 436 arrive en caisse automatique
+Le client 437 arrive en caisse automatique
+Le client 438 arrive en caisse automatique
+Le client 439 arrive en caisse automatique
+Le client 440 arrive en caisse automatique
+Le client 441 arrive 
+Le client 442 arrive 
+Le client 443 arrive en caisse automatique
+Le client 444 fait son achat sur internet 
+client 444 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 444 va essayer de voir un autre film
+client 444 veut voir le film maze runner
+client 444 à acheté sa place pour le film maze runner dans la salle 3 à la place 30
+Le client 444 à acheté son billet sur internet
+Le client 445 arrive 
+Le client 446 fait son achat sur internet 
+client 446 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 446 sort du cinema car il n'y avait plus de place pour son film
+L'abonnee 446 à acheté son billet sur internet
+Le client 447 arrive 
+Le client 448 arrive 
+Le client 449 arrive 
+Le client 450 fait son achat sur internet 
+client 450 veut voir le film un avion se crash
+client 450 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 27
+Le client 450 à acheté son billet sur internet
+Le client 451 arrive en caisse automatique
+Le client 452 fait son achat sur internet 
+client 452 veut voir le film starw wars
+client 452 à acheté sa place pour le film starw wars dans la salle 1 à la place 22
+Le client 452 à acheté son billet sur internet
+Le client 453 arrive 
+Le client 454 arrive en caisse automatique
+Le client 455 arrive 
+Le client 456 fait son achat sur internet 
+client 456 veut voir le film maze runner
+client 456 à acheté sa place pour le film maze runner dans la salle 3 à la place 31
+Le client 456 à acheté son billet sur internet
+Le client 457 arrive en caisse automatique
+Le client 458 arrive 
+Le client 459 arrive 
+Le client 460 arrive 
+Le client 461 arrive 
+Le client 462 arrive 
+Le client 463 fait son achat sur internet 
+client 463 veut voir le film un avion se crash
+client 463 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 28
+Le client 463 à acheté son billet sur internet
+Le client 464 fait son achat sur internet 
+client 464 veut voir le film starw wars
+client 464 à acheté sa place pour le film starw wars dans la salle 1 à la place 23
+Le client 464 à acheté son billet sur internet
+Le client 465 arrive en caisse automatique
+Le client 466 arrive en caisse automatique
+Le client 467 fait son achat sur internet 
+client 467 veut voir le film starw wars
+client 467 à acheté sa place pour le film starw wars dans la salle 1 à la place 24
+Le client 467 à acheté son billet sur internet
+Le client 468 fait son achat sur internet 
+client 468 veut voir le film spectre
+client 468 à acheté sa place pour le film spectre dans la salle 4 à la place 27
+Le client 468 à acheté son billet sur internet
+Le client 469 arrive 
+Le client 470 arrive en caisse automatique
+Le client 471 fait son achat sur internet 
+client 471 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 471 sort du cinema car il n'y avait plus de place pour son film
+Le client 471 à acheté son billet sur internet
+Le client 472 fait son achat sur internet 
+client 472 veut voir le film spectre
+client 472 à acheté sa place pour le film spectre dans la salle 4 à la place 28
+Le client 472 à acheté son billet sur internet
+Le client 473 fait son achat sur internet 
+client 473 veut voir le film starw wars
+client 473 à acheté sa place pour le film starw wars dans la salle 1 à la place 25
+Le client 473 à acheté son billet sur internet
+Le client 474 fait son achat sur internet 
+client 474 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 474 sort du cinema car il n'y avait plus de place pour son film
+Le client 474 à acheté son billet sur internet
+Le client 475 fait son achat sur internet 
+client 475 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 475 sort du cinema car il n'y avait plus de place pour son film
+Le client 475 à acheté son billet sur internet
+Le client 476 fait son achat sur internet 
+client 476 veut voir le film maze runner
+client 476 à acheté sa place pour le film maze runner dans la salle 3 à la place 32
+Le client 476 à acheté son billet sur internet
+Le client 477 arrive 
+Le client 478 arrive en caisse automatique
+Le client 479 arrive 
+Le client 480 arrive 
+Le client 481 fait son achat sur internet 
+client 481 veut voir le film maze runner
+client 481 à acheté sa place pour le film maze runner dans la salle 3 à la place 33
+Le client 481 à acheté son billet sur internet
+Le client 482 arrive 
+Le client 483 arrive en caisse automatique
+Le client 484 fait son achat sur internet 
+client 484 veut voir le film maze runner
+client 484 à acheté sa place pour le film maze runner dans la salle 3 à la place 34
+Le client 484 à acheté son billet sur internet
+Le client 485 arrive 
+Le client 486 fait son achat sur internet 
+client 486 veut voir le film maze runner
+client 486 à acheté sa place pour le film maze runner dans la salle 3 à la place 35
+Le client 486 à acheté son billet sur internet
+Le client 487 fait son achat sur internet 
+client 487 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 487 sort du cinema car il n'y avait plus de place pour son film
+Le client 487 à acheté son billet sur internet
+Le client 488 fait son achat sur internet 
+client 488 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 488 sort du cinema car il n'y avait plus de place pour son film
+Le client 488 à acheté son billet sur internet
+Le client 489 fait son achat sur internet 
+client 489 veut voir le film un avion se crash
+client 489 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 29
+Le client 489 à acheté son billet sur internet
+Le client 490 fait son achat sur internet 
+client 490 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 490 sort du cinema car il n'y avait plus de place pour son film
+Le client 490 à acheté son billet sur internet
+Le client 491 fait son achat sur internet 
+client 491 veut voir le film un avion se crash
+client 491 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 30
+Le client 491 à acheté son billet sur internet
+Le client 492 arrive 
+Le client 493 arrive en caisse automatique
+la caissière n° 0 appelle un client !
+la caissière n° 1 appelle un client !
+client 17 veut voir le film spectre
+client 17 à acheté sa place pour le film spectre dans la salle 4 à la place 29
+L'abonnee 17 à acheté son billet auprès d'une caissière
+client 23 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 23 sort du cinema car il n'y avait plus de place pour son film
+Le client 23 à acheté son billet auprès d'une caissière
+la caissière n° 2 appelle un client !
+la caissière n° 3 appelle un client !
+client 25 veut voir le film starw wars
+client 25 à acheté sa place pour le film starw wars dans la salle 1 à la place 26
+Le client 25 à acheté son billet auprès d'une caissière
+client 27 veut voir le film un avion se crash
+client 27 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 31
+Le client 27 à acheté son billet auprès d'une caissière
+la caissière n° 6 appelle un client !
+la caissière n° 5 appelle un client !
+client 30 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 30 sort du cinema car il n'y avait plus de place pour son film
+L'abonnee 30 à acheté son billet auprès d'une caissière
+client 28 veut voir le film maze runner
+client 28 à acheté sa place pour le film maze runner dans la salle 3 à la place 36
+Le client 28 à acheté son billet auprès d'une caissière
+la caissière n° 7 appelle un client !
+client 31 veut voir le film starw wars
+client 31 à acheté sa place pour le film starw wars dans la salle 1 à la place 27
+Le client 31 à acheté son billet auprès d'une caissière
+la caissière n° 4 appelle un client !
+client 33 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 33 sort du cinema car il n'y avait plus de place pour son film
+Le client 33 à acheté son billet auprès d'une caissière
+Un client Arrive à la caisse automatique n° 0  !
+Un client Arrive à la caisse automatique n° 1  !
+client 3 veut voir le film un avion se crash
+client 3 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 32
+Le client 3 à acheté son billet à la caisse automatique
+client 9 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 9 sort du cinema car il n'y avait plus de place pour son film
+Le client 9 à acheté son billet à la caisse automatique
+Un client Arrive à la caisse automatique n° 2  !
+client 10 veut voir le film spectre
+client 10 à acheté sa place pour le film spectre dans la salle 4 à la place 30
+Le client 10 à acheté son billet à la caisse automatique
+la caissière n° 1 appelle un client !
+la caissière n° 0 appelle un client !
+client 35 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 35 sort du cinema car il n'y avait plus de place pour son film
+L'abonnee 35 à acheté son billet auprès d'une caissière
+client 34 veut voir le film un avion se crash
+client 34 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 33
+L'abonnee 34 à acheté son billet auprès d'une caissière
+la caissière n° 2 appelle un client !
+la caissière n° 3 appelle un client !
+client 39 veut voir le film starw wars
+client 39 à acheté sa place pour le film starw wars dans la salle 1 à la place 28
+Le client 39 à acheté son billet auprès d'une caissière
+client 40 veut voir le film maze runner
+client 40 à acheté sa place pour le film maze runner dans la salle 3 à la place 37
+Le client 40 à acheté son billet auprès d'une caissière
+la caissière n° 6 appelle un client !
+client 42 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 42 sort du cinema car il n'y avait plus de place pour son film
+Le client 42 à acheté son billet auprès d'une caissière
+la caissière n° 5 appelle un client !
+client 43 veut voir le film un avion se crash
+client 43 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 34
+Le client 43 à acheté son billet auprès d'une caissière
+la caissière n° 7 appelle un client !
+client 47 veut voir le film starw wars
+client 47 à acheté sa place pour le film starw wars dans la salle 1 à la place 29
+Le client 47 à acheté son billet auprès d'une caissière
+la caissière n° 4 appelle un client !
+client 50 veut voir le film spectre
+client 50 à acheté sa place pour le film spectre dans la salle 4 à la place 31
+Le client 50 à acheté son billet auprès d'une caissière
+Un client Arrive à la caisse automatique n° 0  !
+Un client Arrive à la caisse automatique n° 1  !
+la caissière n° 1 appelle un client !
+la caissière n° 0 appelle un client !
+client 54 veut voir le film starw wars
+client 54 à acheté sa place pour le film starw wars dans la salle 1 à la place 30
+L'abonnee 54 à acheté son billet auprès d'une caissière
+client 18 veut voir le film maze runner
+client 18 à acheté sa place pour le film maze runner dans la salle 3 à la place 38
+Le client 18 à acheté son billet à la caisse automatique
+client 13 veut voir le film spectre
+client 13 à acheté sa place pour le film spectre dans la salle 4 à la place 32
+Le client 13 à acheté son billet à la caisse automatique
+la caissière n° 2 appelle un client !
+client 53 veut voir le film maze runner
+client 53 à acheté sa place pour le film maze runner dans la salle 3 à la place 39
+Le client 53 à acheté son billet auprès d'une caissière
+client 56 veut voir le film spectre
+client 56 à acheté sa place pour le film spectre dans la salle 4 à la place 33
+Un client Arrive à la caisse automatique n° 2  !
+Le client 56 à acheté son billet auprès d'une caissière
+la caissière n° 3 appelle un client !
+client 20 veut voir le film spectre
+client 20 à acheté sa place pour le film spectre dans la salle 4 à la place 34
+Le client 20 à acheté son billet à la caisse automatique
+client 57 veut voir le film maze runner
+client 57 à acheté sa place pour le film maze runner dans la salle 3 à la place 40
+Le client 57 à acheté son billet auprès d'une caissière
+la caissière n° 6 appelle un client !
+client 61 veut voir le film spectre
+client 61 à acheté sa place pour le film spectre dans la salle 4 à la place 35
+L'abonnee 61 à acheté son billet auprès d'une caissière
+la caissière n° 5 appelle un client !
+la caissière n° 7 appelle un client !
+client 66 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 66 sort du cinema car il n'y avait plus de place pour son film
+Le client 66 à acheté son billet auprès d'une caissière
+client 62 veut voir le film spectre
+client 62 à acheté sa place pour le film spectre dans la salle 4 à la place 36
+Le client 62 à acheté son billet auprès d'une caissière
+la caissière n° 4 appelle un client !
+client 68 veut voir le film starw wars
+client 68 à acheté sa place pour le film starw wars dans la salle 1 à la place 31
+Le client 68 à acheté son billet auprès d'une caissière
+la caissière n° 0 appelle un client !
+la caissière n° 1 appelle un client !
+la caissière n° 2 appelle un client !
+client 69 veut voir le film maze runner
+client 69 à acheté sa place pour le film maze runner dans la salle 3 à la place 41
+client 71 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 71 sort du cinema car il n'y avait plus de place pour son film
+Le client 71 à acheté son billet auprès d'une caissière
+Le client 69 à acheté son billet auprès d'une caissière
+client 72 veut voir le film un avion se crash
+client 72 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 35
+Le client 72 à acheté son billet auprès d'une caissière
+la caissière n° 6 appelle un client !
+la caissière n° 3 appelle un client !
+client 75 veut voir le film starw wars
+client 75 à acheté sa place pour le film starw wars dans la salle 1 à la place 32
+Le client 75 à acheté son billet auprès d'une caissière
+client 73 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 73 va essayer de voir un autre film
+client 73 veut voir le film spectre
+client 73 à acheté sa place pour le film spectre dans la salle 4 à la place 37
+Le client 73 à acheté son billet auprès d'une caissière
+la caissière n° 5 appelle un client !
+la caissière n° 7 appelle un client !
+client 79 veut voir le film spectre
+client 79 à acheté sa place pour le film spectre dans la salle 4 à la place 38
+Le client 79 à acheté son billet auprès d'une caissière
+client 76 veut voir le film starw wars
+client 76 à acheté sa place pour le film starw wars dans la salle 1 à la place 33
+L'abonnee 76 à acheté son billet auprès d'une caissière
+la caissière n° 4 appelle un client !
+client 80 veut voir le film starw wars
+client 80 à acheté sa place pour le film starw wars dans la salle 1 à la place 34
+Le client 80 à acheté son billet auprès d'une caissière
+Un client Arrive à la caisse automatique n° 0  !
+Un client Arrive à la caisse automatique n° 1  !
+client 21 veut voir le film maze runner
+client 21 à acheté sa place pour le film maze runner dans la salle 3 à la place 42
+Le client 21 à acheté son billet à la caisse automatique
+client 22 veut voir le film un avion se crash
+client 22 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 36
+Le client 22 à acheté son billet à la caisse automatique
+Un client Arrive à la caisse automatique n° 2  !
+client 26 veut voir le film starw wars
+client 26 à acheté sa place pour le film starw wars dans la salle 1 à la place 35
+Le client 26 à acheté son billet à la caisse automatique
+la caissière n° 0 appelle un client !
+la caissière n° 2 appelle un client !
+la caissière n° 3 appelle un client !
+client 89 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 89 sort du cinema car il n'y avait plus de place pour son film
+Le client 89 à acheté son billet auprès d'une caissière
+la caissière n° 1 appelle un client !
+client 90 veut voir le film maze runner
+client 90 à acheté sa place pour le film maze runner dans la salle 3 à la place 43
+L'abonnee 90 à acheté son billet auprès d'une caissière
+client 84 veut voir le film starw wars
+client 84 à acheté sa place pour le film starw wars dans la salle 1 à la place 36
+Le client 84 à acheté son billet auprès d'une caissière
+la caissière n° 6 appelle un client !
+la caissière n° 5 appelle un client !
+la caissière n° 7 appelle un client !
+client 86 veut voir le film starw wars
+client 86 à acheté sa place pour le film starw wars dans la salle 1 à la place 37
+L'abonnee 86 à acheté son billet auprès d'une caissière
+la caissière n° 4 appelle un client !
+client 94 veut voir le film spectre
+client 94 à acheté sa place pour le film spectre dans la salle 4 à la place 39
+L'abonnee 94 à acheté son billet auprès d'une caissière
+client 92 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 92 sort du cinema car il n'y avait plus de place pour son film
+Le client 92 à acheté son billet auprès d'une caissière
+client 95 veut voir le film maze runner
+client 95 à acheté sa place pour le film maze runner dans la salle 3 à la place 44
+Le client 95 à acheté son billet auprès d'une caissière
+client 91 veut voir le film spectre
+client 91 à acheté sa place pour le film spectre dans la salle 4 à la place 40
+Le client 91 à acheté son billet auprès d'une caissière
+Un client Arrive à la caisse automatique n° 0  !
+Un client Arrive à la caisse automatique n° 1  !
+client 29 veut voir le film un avion se crash
+client 29 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 37
+Le client 29 à acheté son billet à la caisse automatique
+client 36 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 36 sort du cinema car il n'y avait plus de place pour son film
+Le client 36 à acheté son billet à la caisse automatique
+Un client Arrive à la caisse automatique n° 2  !
+client 37 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 37 va essayer de voir un autre film
+client 37 veut voir le film maze runner
+client 37 à acheté sa place pour le film maze runner dans la salle 3 à la place 45
+Le client 37 à acheté son billet à la caisse automatique
+la caissière n° 0 appelle un client !
+la caissière n° 2 appelle un client !
+la caissière n° 3 appelle un client !
+client 100 veut voir le film starw wars
+client 100 à acheté sa place pour le film starw wars dans la salle 1 à la place 38
+L'abonnee 100 à acheté son billet auprès d'une caissière
+client 98 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 98 sort du cinema car il n'y avait plus de place pour son film
+L'abonnee 98 à acheté son billet auprès d'une caissière
+client 101 veut voir le film maze runner
+client 101 à acheté sa place pour le film maze runner dans la salle 3 à la place 46
+Le client 101 à acheté son billet auprès d'une caissière
+la caissière n° 1 appelle un client !
+client 105 veut voir le film un avion se crash
+client 105 à acheté sa place pour le film un avion se crash dans la salle 5 à la place 38
+Le client 105 à acheté son billet auprès d'une caissière
+la caissière n° 6 appelle un client !
+la caissière n° 5 appelle un client !
+la caissière n° 7 appelle un client !
+client 115 veut voir le film maze runner
+client 115 à acheté sa place pour le film maze runner dans la salle 3 à la place 47
+Le client 115 à acheté son billet auprès d'une caissière
+client 107 veut voir le film spectre
+client 107 à acheté sa place pour le film spectre dans la salle 4 à la place 41
+Le client 107 à acheté son billet auprès d'une caissière
+client 111 veut voir le film spectre
+client 111 à acheté sa place pour le film spectre dans la salle 4 à la place 42
+Le client 111 à acheté son billet auprès d'une caissière
+la caissière n° 4 appelle un client !
+client 116 veut voir le film toto au cine
+il n'y a plus de place pour le film starw wars
+le client 116 sort du cinema car il n'y avait plus de place pour son film
+Le client 116 à acheté son billet auprès d'une caissière
+la caissière n° 0 appelle un client !
+la caissière n° 2 appelle un client !
+client 119 veut voir le film starw 

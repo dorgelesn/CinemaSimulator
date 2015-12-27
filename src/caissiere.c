@@ -5,7 +5,7 @@ void VendreBillet(int numCaisse){
     
     pthread_mutex_lock(&mutex_attenteClient);
     
-    if(nbClientsAttente == 0)
+    if(nbClientsAttente == 0 && nbAbonneeAttente == 0)
     {
         printf("pas de clients à la caisse numero %d \n",numCaisse);
         printf("appels caisse %d\n",nbAppelCaisse);	
@@ -15,7 +15,10 @@ void VendreBillet(int numCaisse){
     }
     printf("la caissière n° %d appelle un client !\n",numCaisse);
     nbAppelCaisse++;
-    pthread_cond_signal(&attendre);
+    if(nbAbonneeAttente==0)
+        pthread_cond_signal(&attendre);
+    else
+        pthread_cond_signal(&attendreAbonnee);
     pthread_mutex_unlock(&mutex_attenteClient);
     
 }
