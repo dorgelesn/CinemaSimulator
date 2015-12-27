@@ -1,0 +1,164 @@
+%Abonnees
+NBCAISSES
+NBCAISSEAUTO
+NBClients
+
+%PERSONNESVONTAUCAISSE
+%PERSONNESCAISSEAUTO
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<cinema nbCaisses="8" nbCaissesAuto="4" nbClients="1000" pourcentageDePersonnesAuCaisses="50" pourcentageDePersonnesAuCaissesAuto="30">
+    
+    <lesFilms>
+        
+        <film>
+            <id>1</id>
+            <titre>Star wars : le réveil de la force</titre>
+            <genre>science fiction</genre>
+            <duree>136</duree>
+            <horaire>1</horaire>
+            <pegi>12</pegi>
+        </film>
+        <film>
+            <id>2</id>
+            <titre>Babysitting 2</titre>
+            <genre>comedie</genre>
+            <duree>92</duree>
+            <horaire>1</horaire>
+            <pegi>3</pegi>
+        </film>
+        <film>
+            <id>3</id>
+            <titre>The big short : le casse du siècle</titre>
+            <genre>comedie</genre>
+            <duree>130</duree>
+            <horaire>1</horaire>
+            <pegi>3</pegi>
+        </film>
+        <film>
+            <id>4</id>
+            <titre>Snoopy et les peanuts - le film</titre>
+            <genre>animation</genre>
+            <duree>88</duree>
+            <horaire>1</horaire>
+            <pegi>3</pegi>
+        </film>
+        <film>
+            <id>5</id>
+            <titre>Le voyage d'Arlo</titre>
+            <genre>animation</genre>
+            <duree>94</duree>
+            <horaire>1</horaire>
+            <pegi>3</pegi>
+        </film>
+        <film>
+            <id>6</id>
+            <titre>Le grand partage</titre>
+            <genre>comedie</genre>
+            <duree>104</duree>
+            <horaire>1</horaire>
+            <pegi>3</pegi>
+        </film>
+        <film>
+            <id>7</id>
+            <titre>Belle et Sébastien, l'aventure continue</titre>
+            <genre>aventure</genre>
+            <duree>98</duree>
+            <horaire>1</horaire>
+            <pegi>3</pegi>
+        </film>
+        <film>
+            <id>8</id>
+            <titre>Le nouveau</titre>
+            <genre>comedie</genre>
+            <duree>81</duree>
+            <horaire>1</horaire>
+            <pegi>3</pegi>
+        </film>
+        <film>
+            <id>9</id>
+            <titre>007 spectre</titre>
+            <genre>action</genre>
+            <duree>148</duree>
+            <horaire>1</horaire>
+            <pegi>3</pegi>
+        </film>
+        <film>
+            <id>10</id>
+            <titre>hunger games : la revelote seconde partie</titre>
+            <genre>action</genre>
+            <duree>136</duree>
+            <horaire>1</horaire>
+            <pegi>3</pegi>
+        </film>
+        
+    </lesFilms>
+    
+    <lesSalles>
+        <salle>
+            <numeroSalle>1</numeroSalle>
+            <capacite>120</capacite>
+            <film>1</film>
+        </salle>
+        <salle>
+            <numeroSalle>2</numeroSalle>
+            <capacite>50</capacite>
+            <film>2</film>
+        </salle>
+        <salle>
+            <numeroSalle>3</numeroSalle>
+            <capacite>80</capacite>
+            <film>3</film>
+        </salle>
+        <salle>
+            <numeroSalle>4</numeroSalle>
+            <capacite>50</capacite>
+            <film>4</film>
+        </salle>
+        <salle>
+            <numeroSalle>5</numeroSalle>
+            <capacite>50</capacite>
+            <film>5</film>
+        </salle>
+        <salle>
+            <numeroSalle>6</numeroSalle>
+            <capacite>80</capacite>
+            <film>6</film>
+        </salle>
+        <salle>
+            <numeroSalle>7</numeroSalle>
+            <capacite>120</capacite>
+            <film>7</film>
+        </salle>
+        <salle>
+            <numeroSalle>8</numeroSalle>
+            <capacite>200</capacite>
+            <film>8</film>
+        </salle>
+        <salle>
+            <numeroSalle>9</numeroSalle>
+            <capacite>75</capacite>
+            <film>9</film>
+        </salle>
+        <salle>
+            <numeroSalle>10</numeroSalle>
+            <capacite>80</capacite>
+            <film>10</film>
+        </salle>
+        <salle>
+            <numeroSalle>11</numeroSalle>
+            <capacite>120</capacite>
+            <film>1</film>
+        </salle>
+        <salle>
+            <numeroSalle>12</numeroSalle>
+            <capacite>250</capacite>
+            <film>1</film>
+        </salle>
+        
+        
+    </lesSalles>
+    
+    
+</cinema>

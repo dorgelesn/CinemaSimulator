@@ -11,8 +11,8 @@
 #include "../include/argStruct.h"
 #include "../include/caisseAuto.h"
 
-#define Nbcaisses 8
-#define NbcaissesAuto 3
+#define Nbcaisses 15
+#define NbcaissesAuto 12
 #define NbClients 1000
 #define NBSalles 5
 #define NBFilms 5
