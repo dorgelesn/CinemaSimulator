@@ -77,9 +77,12 @@ void AcheterBilletAuto(int i)
 void choisirFilm(int i)
 {
     
-    int film = rand()%(NBSalles-0) +0;
-    printf("client %d veut voir le film %s\n",i, lesSalles[film]->film->titre);
-    if(lesSalles[film]->NBPersonnes==lesSalles[film]->CAPACITE)
+    int film = rand()%(NBFilms-0) +0;
+    printf("client %d veut voir le film %s\n",i, lesFilms[film]->titre);
+    
+    SalleStruct * laSalle = choixSalle(lesFilms[film]);
+    
+    if(laSalle == NULL)
     {
         printf("il n'y a plus de place pour le film %s\n",lesSalles[film]->film->titre);
         int random = rand()%(100-0) +0;
@@ -96,11 +99,37 @@ void choisirFilm(int i)
     }
     else
     {
-        printf("client %d à acheté sa place pour le film %s dans la salle %d à la place %d\n",i,lesSalles[film]->film->titre,lesSalles[film]->numero,lesSalles[film]->NBPersonnes+1);
+        printf("client %d à acheté sa place pour le film %s dans la salle %d à la place %d\n",i,laSalle->film->titre,laSalle->numero,laSalle->NBPersonnes+1);
         //Ajouter un mutex pour la capaacité des salles quand il y aura 3 moyens de commander les billets 
-        (lesSalles[film]->NBPersonnes)++;
+        (laSalle->NBPersonnes)++;
         
     }
     
     
 }
+
+SalleStruct* choixSalle(FilmStruct * unFilm)
+{
+    int i;
+    for(i=0;i<NBSalles;i++){
+            
+        if(lesSalles[i]->film == unFilm){
+            
+            if(lesSalles[i]->NBPersonnes<lesSalles[i]->CAPACITE)
+            {
+                return lesSalles[i];
+            }
+            
+        }
+        
+    }
+    return NULL;
+}
+
+
+
+
+
+
+
+

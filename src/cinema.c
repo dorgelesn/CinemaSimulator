@@ -50,6 +50,9 @@ int main()
     
     int testt;
     
+    lesSalles[0]->film = lesSalles[1]->film;
+    //printf("adresses %d %d\n",lesSalles[0]->film, lesSalles[1]->film);
+    
     for(testt=0; testt < NBSalles; testt++){
      printf("Salle n° %d film %s CAPACITE %d \n",lesSalles[testt]->numero, (lesSalles[testt]->film)->titre, lesSalles[testt]->CAPACITE);   
         

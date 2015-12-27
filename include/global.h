@@ -4,10 +4,10 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "../include/FilmStruct.h"
+#include "../include/SalleStruct.h"
 #include "../include/caissiere.h"
 #include "../include/client.h"
 #include "../include/argStruct.h"
-#include "../include/SalleStruct.h"
 #include "../include/caisseAuto.h"
 
 #define Nbcaisses 8
