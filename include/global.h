@@ -10,16 +10,18 @@
 #include "../include/abonnee.h"
 #include "../include/argStruct.h"
 #include "../include/caisseAuto.h"
-
-#define NBSalles 5
-#define NBFilms 5
-
+//#define NBSalles 5
+//#define NBFilms 5
 pthread_t* tid;
 pthread_mutex_t mutex_attenteClient;
 pthread_cond_t attendre, dormir, attendreAuto, dormirAuto, attendreAbonnee;
-SalleStruct * lesSalles[NBSalles];
-FilmStruct * lesFilms[NBFilms];
+//SalleStruct * lesSalles[NBSalles];
+//FilmStruct * lesFilms[NBFilms];
+SalleStruct ** lesSalles;
+FilmStruct ** lesFilms;
 
+int NBSalles;
+int NBFilms;
 int nbClientsAttente;
 int nbClientsAttenteAuto;
 int nbAppelCaisse;

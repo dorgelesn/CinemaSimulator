@@ -25,46 +25,22 @@ int main()
     parserConfig();
     pthread_t tid2[NbClients+Nbcaisses+NbcaissesAuto];
     tid=tid2;
+    sleep(3);
     //tid=malloc((NbClients+Nbcaisses+NbcaissesAuto)*sizeof(pthread_t));
     // creation des salles /!\ fuite memoire
-    
-    int numSalle;
-    char *nom[5]={"toto au cine","starw wars","maze runner","spectre","un avion se crash"};
-    char *genres[5]={"comedie","science-fiction","aventure","action","drame"};
-    int duree[5]={120,90,180,111,10};
-    int horaire[5]={1,2,1,2,1};
-    int pegi[5]={3,12,12,16,18};
-    
-    int i;
-    for(i = 0; i<5; i++)
-    {
-        FilmStruct * unFilm = malloc(sizeof(FilmStruct));
-        unFilm->titre = nom[i];
-        unFilm->genre = genres[i];
-        unFilm->duree = duree[i];
-        unFilm->horaire = horaire[i];
-        unFilm->pegi = pegi[i];
-        lesFilms[i] = unFilm;
-        
-    }
-    
-    for(numSalle =1; numSalle <= NBSalles; numSalle++){
-            SalleStruct * uneSalle = malloc(sizeof(SalleStruct));
-            uneSalle->film=lesFilms[numSalle-1];
-            uneSalle->numero=numSalle;
-            uneSalle->CAPACITE = 120;
-            lesSalles[numSalle-1] = uneSalle;
-    }
     
     int testt;
     
     //lesSalles[0]->film = lesSalles[1]->film;
     //  printf("adresses %d %d\n",lesSalles[0]->film, lesSalles[1]->film);
     
-    for(testt=0; testt < NBSalles; testt++){
-     printf("Salle n° %d film %s CAPACITE %d \n",lesSalles[testt]->numero, (lesSalles[testt]->film)->titre, lesSalles[testt]->CAPACITE);   
+    for(testt=0; testt < 5; testt++){
+     printf("Salle n° %d film %s CAPACITE %d %d\n",lesSalles[testt]->numero, (lesSalles[testt]->film)->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
         
     }
+    sleep(5);
+    
+    
     
     // creation des caisses et des caisses auto /!\ fuite memoire
     for(num=0;num<Nbcaisses+NbcaissesAuto;num++){
