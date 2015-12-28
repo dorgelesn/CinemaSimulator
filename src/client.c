@@ -87,11 +87,19 @@ int choisirFilm(int i)
         if(random >= 80)
         {
             printf("le client %d va essayer de voir un autre film\n",i);
-            choisirFilm(i);
+            if(choisirFilm(i)==1)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+            
         }
         else{
             printf("le client %d sort du cinema car il n'y avait plus de place pour son film\n",i);
-            return 1;
+            return 0;
         }
             
         
@@ -103,6 +111,7 @@ int choisirFilm(int i)
         (laSalle->NBPersonnes)++;
         return 1;
     }
+    
     return 1;
 }
 

@@ -1,6 +1,7 @@
 /* coiffeur.c */
 
 #include "../include/global.h"
+#include "../include/parseConfig.h"
 
 
 
@@ -21,7 +22,10 @@ int main()
     pthread_cond_init(&attendreAbonnee,NULL);
     
     srand(time(NULL));
-    
+    parserConfig();
+    pthread_t tid2[NbClients+Nbcaisses+NbcaissesAuto];
+    tid=tid2;
+    //tid=malloc((NbClients+Nbcaisses+NbcaissesAuto)*sizeof(pthread_t));
     // creation des salles /!\ fuite memoire
     
     int numSalle;
@@ -83,7 +87,7 @@ int main()
         numClient->num = num-Nbcaisses-NbcaissesAuto;
         
         int rng = rand()%(100-0) +0;
-        if(rng<PourcentAbonnee)
+        if(rng<=PourcentAbonnee)
             pthread_create(tid+num,0,(void *(*)())fonc_abonnee,numClient);
         else        
             pthread_create(tid+num,0,(void *(*)())fonc_client,numClient);
@@ -101,7 +105,11 @@ int main()
     for(num=(NbClients+Nbcaisses+NbcaissesAuto)/2;num<(NbClients+Nbcaisses+NbcaissesAuto);num++){
         argStruct *numClient = malloc(sizeof(*numClient));
         numClient->num = num-Nbcaisses-NbcaissesAuto;
-        pthread_create(tid+num,0,(void *(*)())fonc_client,numClient);
+        int rng = rand()%(100-0) +0;
+        if(rng<=PourcentAbonnee)
+            pthread_create(tid+num,0,(void *(*)())fonc_abonnee,numClient);
+        else        
+            pthread_create(tid+num,0,(void *(*)())fonc_client,numClient);
     }
     
         sleep(20);
