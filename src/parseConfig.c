@@ -28,21 +28,29 @@ void parserConfig()
     xmlNode* lesFilmsNode = (cinema->children)->next;
     
     printf("node type: Element, name: %s\n",cinema->name);
-    printf("nbCaisses : %s\nnbCaissesAuto=%s\nnbClients=%s\npourcentageDePersonnesAuCaisses= %s\npourcentageDePersonnesAuCaissesAuto= %s\n", 
+    /*printf("nbCaisses : %s\nnbCaissesAuto=%s\nnbClients=%s\npourcentageDePersonnesAuCaisses= %s\npourcentageDePersonnesAuCaissesAuto= %s\n", 
            (const char*)xmlGetProp( cinema, (const xmlChar*)"nbCaisses") ,
            (const char*)xmlGetProp( cinema, (const xmlChar*)"nbCaissesAuto") ,
            (const char*)xmlGetProp( cinema, (const xmlChar*)"nbClients" ),
            (const char*)xmlGetProp( cinema, (const xmlChar*)"pourcentageDePersonnesAuCaisses") ,
-           (const char*)xmlGetProp( cinema, (const xmlChar*)"pourcentageDePersonnesAuCaissesAuto"));
+           (const char*)xmlGetProp( cinema, (const xmlChar*)"pourcentageDePersonnesAuCaissesAuto"));*/
     
     
     
     //printf("node type: Element, name: %s\n",lesFilms->name);
-    Nbcaisses = atoi((const char*)xmlGetProp( cinema, (const xmlChar*)"nbCaisses"));
-    NbcaissesAuto = atoi((const char*)xmlGetProp( cinema, (const xmlChar*)"nbCaissesAuto"));
-    NbClients = atoi((const char*)xmlGetProp( cinema, (const xmlChar*)"nbClients" ));
-    PourcentAbonnee = atoi((const char*)xmlGetProp( cinema, (const xmlChar*)"PourcentAbonnee" ));
+    char* NbcaissesXML = (char*)xmlGetProp( cinema, (const xmlChar*)"nbCaisses");
+    char* NbcaissesAutoXML = (char*)xmlGetProp( cinema, (const xmlChar*)"nbCaissesAuto");
+    char* NbClientsXML = (char*)xmlGetProp( cinema, (const xmlChar*)"nbClients" );
+    char* PourcentAbonneeXML = (char*)xmlGetProp( cinema, (const xmlChar*)"PourcentAbonnee" );
+    Nbcaisses = atoi(NbcaissesXML);
+    NbcaissesAuto = atoi(NbcaissesAutoXML);
+    NbClients = atoi(NbClientsXML);
+    PourcentAbonnee = atoi(PourcentAbonneeXML);
     
+    xmlFree(NbcaissesXML);
+    xmlFree(NbcaissesAutoXML);
+    xmlFree(NbClientsXML);
+    xmlFree(PourcentAbonneeXML);
     xmlNode* filmNode = NULL;
     int compteurFilm = 0;
     for(filmNode = (lesFilmsNode->children)->next; filmNode; filmNode = filmNode->next)
@@ -102,6 +110,11 @@ void parserConfig()
             unFilm->pegi = atoi(filmPegi);
             lesFilms[i] = unFilm;
             i++;
+            xmlFree(filmId);
+
+            xmlFree(filmDuree);
+            xmlFree(filmHoraire);
+            xmlFree(filmPegi);
             
         }
     }
@@ -121,6 +134,9 @@ void parserConfig()
             uneSalle->NBPersonnes=0;
             lesSalles[i] = uneSalle;
             i++;
+            xmlFree(numeroSalle);
+            xmlFree(capacite);
+            xmlFree(film);
             
         }
     }
@@ -128,7 +144,7 @@ void parserConfig()
     
     
     
-    xmlFreeDoc(doc);       // free document
+    xmlFreeDoc(doc);  // free document
     xmlCleanupParser();    // Free globals
     
     

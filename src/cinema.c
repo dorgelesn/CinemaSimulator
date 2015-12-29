@@ -20,11 +20,19 @@ int main()
     pthread_cond_init(&attendreAuto, NULL);
     pthread_cond_init(&dormirAuto,NULL);
     pthread_cond_init(&attendreAbonnee,NULL);
+    signal(SIGINT, netoyer);
     
     srand(time(NULL));
     parserConfig();
-    pthread_t tid2[NbClients+Nbcaisses+NbcaissesAuto];
-    tid=tid2;
+    //pthread_t tid2[NbClients+Nbcaisses+NbcaissesAuto];
+    tid=malloc((NbClients+Nbcaisses+NbcaissesAuto)*sizeof(pthread_t));
+    arguments=malloc((NbClients+Nbcaisses+NbcaissesAuto)*sizeof(argStruct*));
+    
+    int j;
+    for(j = 0; j<(NbClients+Nbcaisses+NbcaissesAuto);j++)
+    {
+        tid[j]=(pthread_t)NULL;
+    }
     //tid=malloc((NbClients+Nbcaisses+NbcaissesAuto)*sizeof(pthread_t));
     // creation des salles /!\ fuite memoire
     
@@ -37,7 +45,7 @@ int main()
      printf("Salle n° %d film %s CAPACITE %d %d\n",lesSalles[testt]->numero, (lesSalles[testt]->film)->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
         
     }
-    sleep(20);
+    sleep(3);
     
     
     
@@ -45,12 +53,15 @@ int main()
     for(num=0;num<Nbcaisses+NbcaissesAuto;num++){
         if(num<NbcaissesAuto)
         {
-            argStruct *numCaisse = malloc(sizeof(*numCaisse));
+            arguments[num] = malloc(sizeof(argStruct*));
+            argStruct* numCaisse = arguments[num];
             numCaisse->num = num;
+            
             pthread_create(tid+num,0,(void *(*)())fonc_caisseAuto,numCaisse);
         }else
         {
-            argStruct *numCaisse = malloc(sizeof(*numCaisse));
+            arguments[num] = malloc(sizeof(argStruct*));
+            argStruct* numCaisse = arguments[num];
             numCaisse->num = num-NbcaissesAuto;
             pthread_create(tid+num,0,(void *(*)())fonc_caisse,numCaisse);
         }
@@ -58,8 +69,10 @@ int main()
     
     //creation des threads clients /!\ fuite memoire
     for(num=Nbcaisses+NbcaissesAuto;num<(NbClients+Nbcaisses+NbcaissesAuto)/2;num ++){
-        argStruct *numClient = malloc(sizeof(*numClient));
+        arguments[num] = malloc(sizeof(argStruct*));
+        argStruct* numClient=arguments[num];
         numClient->num = num-Nbcaisses-NbcaissesAuto;
+        
         
         int rng = rand()%(100-0) +0;
         if(rng<=PourcentAbonnee)
@@ -78,7 +91,8 @@ int main()
     printf("#########################################\n");
     sleep(10);
     for(num=(NbClients+Nbcaisses+NbcaissesAuto)/2;num<(NbClients+Nbcaisses+NbcaissesAuto);num++){
-        argStruct *numClient = malloc(sizeof(*numClient));
+        arguments[num] = malloc(sizeof(argStruct*));
+        argStruct* numClient=arguments[num];
         numClient->num = num-Nbcaisses-NbcaissesAuto;
         int rng = rand()%(100-0) +0;
         if(rng<=PourcentAbonnee)
@@ -98,9 +112,13 @@ int main()
     printf("#########################################\n");
     
     //attend la fin de toutes les threads clients
-    for(num=0;num<NbClients+Nbcaisses+NbcaissesAuto;num ++)
+    for(num=Nbcaisses+NbcaissesAuto;num<NbClients+Nbcaisses+NbcaissesAuto;num ++)
         pthread_join(tid[num],NULL);
 
+    for(num=0; num<Nbcaisses+NbcaissesAuto;num++){
+            pthread_cancel(tid[num]);
+    }
+    
     
     /* liberation des ressources");*/
     

@@ -1,5 +1,6 @@
 #include "../include/global.h"
 
+
 void * fonc_client(void *i)
 {
     argStruct *arg = i;
@@ -25,7 +26,6 @@ void * fonc_client(void *i)
     
     /* temps de vente */
     //usleep(200000);
-    
     return 0;
 }
 
@@ -107,7 +107,6 @@ int choisirFilm(int i)
     else
     {
         printf("client %d à acheté sa place pour le film %s dans la salle %d à la place %d\n",i,laSalle->film->titre,laSalle->numero,laSalle->NBPersonnes+1);
-        //Ajouter un mutex pour la capaacité des salles quand il y aura 3 moyens de commander les billets 
         (laSalle->NBPersonnes)++;
         return 1;
     }

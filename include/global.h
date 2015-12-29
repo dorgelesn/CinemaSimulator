@@ -1,8 +1,10 @@
 
 #include <stdio.h>
 #include <pthread.h>
+#include <sys/types.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <signal.h>
 #include "../include/FilmStruct.h"
 #include "../include/SalleStruct.h"
 #include "../include/caissiere.h"
@@ -11,6 +13,7 @@
 #include "../include/argStruct.h"
 #include "../include/caisseAuto.h"
 #include "../include/getFilm.h"
+#include "../include/netoyage.h"
 //#define NBSalles 5
 //#define NBFilms 5
 pthread_t* tid;
@@ -33,3 +36,6 @@ int Nbcaisses;
 int NbcaissesAuto;
 int NbClients;
 int PourcentAbonnee;
+
+//for esay cleaning of memory 
+argStruct ** arguments;
