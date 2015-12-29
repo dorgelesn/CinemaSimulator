@@ -4,152 +4,34 @@
     
     <lesFilms>
         
-        <film>
-            <id>1</id>
-            <titre>Star wars : le réveil de la force</titre>
-            <genre>science fiction</genre>
-            <duree>136</duree>
-            <horaire>1</horaire>
-            <pegi>12</pegi>
-        </film>
-        <film>
-            <id>2</id>
-            <titre>Babysitting 2</titre>
-            <genre>comedie</genre>
-            <duree>92</duree>
-            <horaire>1</horaire>
-            <pegi>3</pegi>
-        </film>
-        <film>
-            <id>3</id>
-            <titre>The big short : le casse du siècle</titre>
-            <genre>comedie</genre>
-            <duree>130</duree>
-            <horaire>1</horaire>
-            <pegi>3</pegi>
-        </film>
-        <film>
-            <id>4</id>
-            <titre>Snoopy et les peanuts - le film</titre>
-            <genre>animation</genre>
-            <duree>88</duree>
-            <horaire>1</horaire>
-            <pegi>3</pegi>
-        </film>
-        <film>
-            <id>5</id>
-            <titre>Le voyage d'Arlo</titre>
-            <genre>animation</genre>
-            <duree>94</duree>
-            <horaire>1</horaire>
-            <pegi>3</pegi>
-        </film>
-        <film>
-            <id>6</id>
-            <titre>Le grand partage</titre>
-            <genre>comedie</genre>
-            <duree>104</duree>
-            <horaire>1</horaire>
-            <pegi>3</pegi>
-        </film>
-        <film>
-            <id>7</id>
-            <titre>Belle et Sébastien, l'aventure continue</titre>
-            <genre>aventure</genre>
-            <duree>98</duree>
-            <horaire>1</horaire>
-            <pegi>3</pegi>
-        </film>
-        <film>
-            <id>8</id>
-            <titre>Le nouveau</titre>
-            <genre>comedie</genre>
-            <duree>81</duree>
-            <horaire>1</horaire>
-            <pegi>3</pegi>
-        </film>
-        <film>
-            <id>9</id>
-            <titre>007 spectre</titre>
-            <genre>action</genre>
-            <duree>148</duree>
-            <horaire>1</horaire>
-            <pegi>3</pegi>
-        </film>
-        <film>
-            <id>10</id>
-            <titre>hunger games : la revelote seconde partie</titre>
-            <genre>action</genre>
-            <duree>136</duree>
-            <horaire>1</horaire>
-            <pegi>3</pegi>
-        </film>
+        <film id="1" titre="Star wars : le réveil de la force" genre="science fiction" duree="136" horaire="1" pegi="12"></film>
+        <film id="2" titre="Babysitting 2" genre="comedie" duree="92" horaire="1" pegi="3"></film>
+        <film id="3" titre="The big short : le casse du siècle" genre="comedie" duree="130" horaire="1" pegi="3"></film>
+        <film id="4" titre="Snoopy et les peanuts - le film" genre="animation" duree="88" horaire="1" pegi="3"></film>
+        <film id="5" titre="Le voyage d'Arlo" genre="animation" duree="94" horaire="1" pegi="3"></film>
+        <film id="6" titre="Le grand partage" genre="comedie" duree="104" horaire="1" pegi="3"></film>
+        <film id="7" titre="Belle et Sébastien, l'aventure continue" genre="aventure" duree="98" horaire="1" pegi="3"></film>
+        <film id="8" titre="Le nouveau" genre="comedie" duree="81" horaire="1" pegi="3"></film>
+        <film id="9" titre="007 spectre" genre="action" duree="148" horaire="1" pegi="3"></film>
+        <film id="10" titre="hunger games : la revelote seconde partie" genre="action" duree="136" horaire="1" pegi="3"></film>
+
+
         
     </lesFilms>
     
     <lesSalles>
-        <salle>
-            <numeroSalle>1</numeroSalle>
-            <capacite>120</capacite>
-            <film>1</film>
-        </salle>
-        <salle>
-            <numeroSalle>2</numeroSalle>
-            <capacite>50</capacite>
-            <film>2</film>
-        </salle>
-        <salle>
-            <numeroSalle>3</numeroSalle>
-            <capacite>80</capacite>
-            <film>3</film>
-        </salle>
-        <salle>
-            <numeroSalle>4</numeroSalle>
-            <capacite>50</capacite>
-            <film>4</film>
-        </salle>
-        <salle>
-            <numeroSalle>5</numeroSalle>
-            <capacite>50</capacite>
-            <film>5</film>
-        </salle>
-        <salle>
-            <numeroSalle>6</numeroSalle>
-            <capacite>80</capacite>
-            <film>6</film>
-        </salle>
-        <salle>
-            <numeroSalle>7</numeroSalle>
-            <capacite>120</capacite>
-            <film>7</film>
-        </salle>
-        <salle>
-            <numeroSalle>8</numeroSalle>
-            <capacite>200</capacite>
-            <film>8</film>
-        </salle>
-        <salle>
-            <numeroSalle>9</numeroSalle>
-            <capacite>75</capacite>
-            <film>9</film>
-        </salle>
-        <salle>
-            <numeroSalle>10</numeroSalle>
-            <capacite>80</capacite>
-            <film>10</film>
-        </salle>
-        <salle>
-            <numeroSalle>11</numeroSalle>
-            <capacite>120</capacite>
-            <film>1</film>
-        </salle>
-        <salle>
-            <numeroSalle>12</numeroSalle>
-            <capacite>250</capacite>
-            <film>1</film>
-        </salle>
-        
-        
+        <salle numeroSalle="1" capacite="120" film="1"></salle>
+        <salle numeroSalle="2" capacite="50" film="2"></salle>
+        <salle numeroSalle="3" capacite="80" film="3"></salle>
+        <salle numeroSalle="4" capacite="50" film="4"></salle>
+        <salle numeroSalle="5" capacite="50" film="5"></salle>
+        <salle numeroSalle="6" capacite="80" film="6"></salle>
+        <salle numeroSalle="7" capacite="120" film="7"></salle>
+        <salle numeroSalle="8" capacite="200" film="8"></salle>
+        <salle numeroSalle="9" capacite="75" film="9"></salle>
+        <salle numeroSalle="10" capacite="80" film="10"></salle>
+        <salle numeroSalle="11" capacite="120" film="2"></salle>
+        <salle numeroSalle="12" capacite="250" film="9"></salle>        
     </lesSalles>
     
     

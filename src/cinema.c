@@ -25,7 +25,6 @@ int main()
     parserConfig();
     pthread_t tid2[NbClients+Nbcaisses+NbcaissesAuto];
     tid=tid2;
-    sleep(3);
     //tid=malloc((NbClients+Nbcaisses+NbcaissesAuto)*sizeof(pthread_t));
     // creation des salles /!\ fuite memoire
     
@@ -34,11 +33,11 @@ int main()
     //lesSalles[0]->film = lesSalles[1]->film;
     //  printf("adresses %d %d\n",lesSalles[0]->film, lesSalles[1]->film);
     
-    for(testt=0; testt < 5; testt++){
+    for(testt=0; testt < NBSalles; testt++){
      printf("Salle n° %d film %s CAPACITE %d %d\n",lesSalles[testt]->numero, (lesSalles[testt]->film)->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
         
     }
-    sleep(5);
+    sleep(20);
     
     
     

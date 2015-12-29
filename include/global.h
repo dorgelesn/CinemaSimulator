@@ -10,6 +10,7 @@
 #include "../include/abonnee.h"
 #include "../include/argStruct.h"
 #include "../include/caisseAuto.h"
+#include "../include/getFilm.h"
 //#define NBSalles 5
 //#define NBFilms 5
 pthread_t* tid;

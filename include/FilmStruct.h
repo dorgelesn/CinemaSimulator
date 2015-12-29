@@ -5,5 +5,6 @@ typedef struct FilmStruct{
     int duree;
     int horaire;
     int pegi;
+    int id;
     
 }FilmStruct;

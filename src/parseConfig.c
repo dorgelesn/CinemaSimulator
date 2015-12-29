@@ -3,18 +3,18 @@
 #include <libxml/tree.h>
 #include <string.h>
 /* static void print_element_names(xmlNode * a_node)
-{
-    xmlNode *cur_node = NULL;
-    
-    for (cur_node = a_node; cur_node; cur_node =
-        cur_node->next) {
-        if (cur_node->type == XML_ELEMENT_NODE) {
-            printf("node type: Element, name: %s\n",
-                   cur_node->name);
-        }
-        print_element_names(cur_node->children);
-        }
-} */
+ * {
+ *    xmlNode *cur_node = NULL;
+ *    
+ *    for (cur_node = a_node; cur_node; cur_node =
+ *        cur_node->next) {
+ *        if (cur_node->type == XML_ELEMENT_NODE) {
+ *            printf("node type: Element, name: %s\n",
+ *                   cur_node->name);
+ *        }
+ *        print_element_names(cur_node->children);
+ *        }
+ * } */
 
 void parserConfig()
 {
@@ -52,7 +52,7 @@ void parserConfig()
     }
     
     printf("compteur = %d\n",compteurFilm);
-    //NBFilms=compteurFilm;
+    NBFilms=compteurFilm;
     
     
     xmlNode* lesSallesNode = NULL;
@@ -73,45 +73,58 @@ void parserConfig()
     }
     
     printf("compteur = %d\n",compteurSalle);
-    //NBSalles=compteurSalle;
-    
-    NBSalles = 5;
-    NBFilms = 5;
+    NBSalles=compteurSalle;
     
     
     lesFilms = malloc(NBFilms * sizeof(FilmStruct*));
     lesSalles = malloc(NBSalles * sizeof(SalleStruct*));
-    
-    
-    int numSalle;
-    char *nom[5]={"toto au cine","starw wars","maze runner","spectre","un avion se crash"};
-    char *genres[5]={"comedie","science-fiction","aventure","action","drame"};
-    int duree[5]={120,90,180,111,10};
-    int horaire[5]={1,2,1,2,1};
-    int pegi[5]={3,12,12,16,18};
-    
-    int i;
-    for(i = 0; i<NBFilms; i++)
+    printf("OK\n");
+    int i = 0;
+    for(filmNode = (lesFilmsNode->children)->next; filmNode; filmNode = filmNode->next)
     {
-        FilmStruct * unFilm = malloc(sizeof(FilmStruct));
-        unFilm->titre = nom[i];
-        unFilm->genre = genres[i];
-        unFilm->duree = duree[i];
-        unFilm->horaire = horaire[i];
-        unFilm->pegi = pegi[i];
-        lesFilms[i] = unFilm;
         
+        if(filmNode->type == XML_ELEMENT_NODE)
+        {
+            char* filmId = (char*)xmlGetProp( filmNode, (const xmlChar*)"id");
+            char* filmTitre = (char*)xmlGetProp( filmNode, (const xmlChar*)"titre");
+            char* filmGenre = (char*)xmlGetProp( filmNode, (const xmlChar*)"genre");
+            char* filmDuree = (char*)xmlGetProp( filmNode, (const xmlChar*)"duree");
+            char* filmHoraire = (char*)xmlGetProp( filmNode, (const xmlChar*)"horaire");
+            char* filmPegi = (char*)xmlGetProp( filmNode, (const xmlChar*)"pegi");
+            //printf("%s %s %s %s %s %s\n", filmId, filmGenre, filmTitre, filmDuree, filmHoraire, filmPegi);
+            
+            FilmStruct * unFilm = malloc(sizeof(FilmStruct));
+            unFilm->id = atoi(filmId);
+            unFilm->titre = filmTitre;
+            unFilm->genre = filmGenre;
+            unFilm->duree = atoi(filmDuree);
+            unFilm->horaire = atoi(filmHoraire);
+            unFilm->pegi = atoi(filmPegi);
+            lesFilms[i] = unFilm;
+            i++;
+            
+        }
+    }
+    i=0;
+    for(salleNode = (lesSallesNode->children)->next; salleNode; salleNode = salleNode->next)
+    {
+        if(salleNode->type == XML_ELEMENT_NODE)
+        {
+            char* numeroSalle = (char*)xmlGetProp( salleNode, (const xmlChar*)"numeroSalle");
+            char* capacite = (char*)xmlGetProp( salleNode, (const xmlChar*)"capacite");
+            char* film = (char*)xmlGetProp( salleNode, (const xmlChar*)"film");
+            
+            SalleStruct * uneSalle = malloc(sizeof(SalleStruct));
+            uneSalle->film=lesFilms[getIndex(atoi(film))];
+            uneSalle->numero=atoi(numeroSalle);
+            uneSalle->CAPACITE = atoi(capacite);
+            uneSalle->NBPersonnes=0;
+            lesSalles[i] = uneSalle;
+            i++;
+            
+        }
     }
     
-    for(numSalle =1; numSalle <= NBSalles; numSalle++)
-    {
-            SalleStruct * uneSalle = malloc(sizeof(SalleStruct));
-            uneSalle->film=lesFilms[numSalle-1];
-            uneSalle->numero=numSalle;
-            uneSalle->CAPACITE = 120;
-            uneSalle->NBPersonnes=0;
-            lesSalles[numSalle-1] = uneSalle;
-    }
     
     
     
