@@ -1,1 +1,2 @@
 void netoyer();
+void netoyerFin();

@@ -14,6 +14,7 @@ int main()
     nbAbonnee=0;
     nbAbonneeAcheteBillet=0;
     NbSalleMax=0;
+    lesSallesList = NULL;
     int num;
     pthread_mutex_init(&mutex_attenteClient, NULL);
     pthread_cond_init(&attendre, NULL);
@@ -34,18 +35,14 @@ int main()
     {
         tid[j]=(pthread_t)NULL;
     }
-    //tid=malloc((NbClients+Nbcaisses+NbcaissesAuto)*sizeof(pthread_t));
-    // creation des salles /!\ fuite memoire
     
-    int testt;
+    afficherSalles();
+    //int testt;
     
-    //lesSalles[0]->film = lesSalles[1]->film;
-    //  printf("adresses %d %d\n",lesSalles[0]->film, lesSalles[1]->film);
-    
-    for(testt=0; testt < NBSalles; testt++){
+    /*for(testt=0; testt < NBSalles; testt++){
      printf("Salle n° %d film %s CAPACITE %d %d\n",lesSalles[testt]->numero, (lesSalles[testt]->film)->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
         
-    }
+    }*/
     sleep(3);
     
     
@@ -84,10 +81,7 @@ int main()
     sleep(10);
     printf("#########################################\n");
     printf("appels caisse %d\n",nbAppelCaisse);
-    for(testt=0; testt < NBSalles; testt++){
-     printf("Salle n° %d film %s CAPACITE %d NBPersonnes %d\n",lesSalles[testt]->numero, lesSalles[testt]->film->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
-        
-    }
+    afficherSalles();
     printf("Abonnees :\n sont venus : %d\nOn eu leur billet :%d\n ",nbAbonnee, nbAbonneeAcheteBillet);
     printf("#########################################\n");
     sleep(10);
@@ -105,21 +99,17 @@ int main()
         sleep(20);
     printf("#########################################\n");
     printf("appels caisse %d\n",nbAppelCaisse);
-    for(testt=0; testt < NBSalles; testt++){
-     printf("Salle n° %d film %s CAPACITE %d NBPersonnes %d\n",lesSalles[testt]->numero, lesSalles[testt]->film->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
-        
-    }
+    afficherSalles();
     printf("Abonnees :\n sont venus : %d\nOn eu leur billet :%d\n ",nbAbonnee, nbAbonneeAcheteBillet);
     printf("#########################################\n");
-    
     //attend la fin de toutes les threads clients
     for(num=Nbcaisses+NbcaissesAuto;num<NbClients+Nbcaisses+NbcaissesAuto;num ++)
         pthread_join(tid[num],NULL);
-
+    sleep(10);
     for(num=0; num<Nbcaisses+NbcaissesAuto;num++){
             pthread_cancel(tid[num]);
     }
-    
+    netoyerFin();
     
     /* liberation des ressources");*/
     

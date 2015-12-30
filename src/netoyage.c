@@ -46,16 +46,16 @@ static void netoyageFilms()
     free(lesFilms);
     
 }
-
+//TODO
 static void netoyageSalles()
 {
     int i;
     for(i=0;i<NBSalles;i++)
     {
         printf("nettoyage de la salle n° %d\n",i);
-        free(lesSalles[i]);
+        //free(lesSalles[i]);
     }
-    free(lesSalles);
+    //free(lesSalles);
 }
 
 
@@ -78,6 +78,36 @@ void netoyer(){
     pthread_cond_destroy(&attendreAbonnee);
     
     fermetureThreads();
+    netoyageArguments();
+    netoyageSalles();
+    netoyageFilms();
+    //pthread_attr_destroy();
+    
+    exit(1);
+    
+    
+
+    
+}
+void netoyerFin(){
+ 
+    // libération des ressources
+    
+    /*
+     *Ressource à netoyer : 
+     * 
+     * pthread_mutex_t mutex_attenteClient;
+     *   pthread_cond_t attendre, dormir, attendreAuto, dormirAuto, attendreAbonnee;
+     */
+    printf("\n###############################\n#    Netoyage de la memoire   #\n###############################\n");
+    pthread_mutex_destroy(&mutex_attenteClient);
+    pthread_cond_destroy(&attendre);
+    pthread_cond_destroy(&dormir);
+    pthread_cond_destroy(&attendreAuto);
+    pthread_cond_destroy(&dormirAuto);
+    pthread_cond_destroy(&attendreAbonnee);
+    
+    //fermetureThreads();
     netoyageArguments();
     netoyageSalles();
     netoyageFilms();

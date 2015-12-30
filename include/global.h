@@ -24,7 +24,8 @@ pthread_mutex_t mutex_attenteClient;
 pthread_cond_t attendre, dormir, attendreAuto, dormirAuto, attendreAbonnee;
 //SalleStruct * lesSalles[NBSalles];
 //FilmStruct * lesFilms[NBFilms];
-SalleStruct ** lesSalles;
+ListeSalle lesSallesList;
+//SalleStruct ** lesSalles;
 FilmStruct ** lesFilms;
 
 int NBSalles;
@@ -40,6 +41,6 @@ int Nbcaisses;
 int NbcaissesAuto;
 int NbClients;
 int PourcentAbonnee;
-
+int LimiteRefusPlace;
 //for esay cleaning of memory 
 argStruct ** arguments;

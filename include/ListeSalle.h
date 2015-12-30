@@ -8,6 +8,7 @@ struct element
 
 typedef element* ListeSalle;
 
-ListeSalle ajouterSalle(ListeSalle lesSalles, SalleStruct* salle);
+ListeSalle ajouterSalle(ListeSalle liste, SalleStruct* salle);
 
 void detruireLesSalles();
+void afficherSalles();

@@ -82,7 +82,7 @@ int choisirFilm(int i)
     
     if(laSalle == NULL)
     {
-        printf("il n'y a plus de place pour le film %s\n",lesSalles[film]->film->titre);
+        printf("il n'y a plus de place pour le film %s\n",lesFilms[film]->titre);
         int random = rand()%(100-0) +0;
         if(random >= 80)
         {
@@ -116,19 +116,23 @@ int choisirFilm(int i)
 
 SalleStruct* choixSalle(FilmStruct * unFilm)
 {
-    int i;
-    for(i=0;i<NBSalles;i++){
+
+    element *tmp = lesSallesList;
+    while(tmp != NULL)
+    {
+        if(tmp->val->film == unFilm){
             
-        if(lesSalles[i]->film == unFilm){
-            
-            if(lesSalles[i]->NBPersonnes<lesSalles[i]->CAPACITE)
+            if(tmp->val->NBPersonnes < tmp->val->CAPACITE)
             {
-                return lesSalles[i];
+                return tmp->val;
             }
             
         }
-        
+        tmp = tmp->nxt;
+
     }
+    
+    
     return NULL;
 }
 

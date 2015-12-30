@@ -39,6 +39,7 @@ void parserConfig()
     
     //printf("node type: Element, name: %s\n",lesFilms->name);
     char* NbcaissesXML = (char*)xmlGetProp( cinema, (const xmlChar*)"nbCaisses");
+    char* LimiteRefusPlaceXML = (char*)xmlGetProp( cinema, (const xmlChar*)"LimiteRefusPlace");
     char* NbcaissesAutoXML = (char*)xmlGetProp( cinema, (const xmlChar*)"nbCaissesAuto");
     char* NbClientsXML = (char*)xmlGetProp( cinema, (const xmlChar*)"nbClients" );
     char* PourcentAbonneeXML = (char*)xmlGetProp( cinema, (const xmlChar*)"PourcentAbonnee" );
@@ -48,7 +49,9 @@ void parserConfig()
     NbClients = atoi(NbClientsXML);
     PourcentAbonnee = atoi(PourcentAbonneeXML);
     NbSalleMax = atoi(NbSalleMaxXML);
+    LimiteRefusPlace=atoi(LimiteRefusPlaceXML);
     
+    xmlFree(LimiteRefusPlaceXML);
     xmlFree(NbSalleMaxXML);
     xmlFree(NbcaissesXML);
     xmlFree(NbcaissesAutoXML);
@@ -88,7 +91,6 @@ void parserConfig()
     
     
     lesFilms = malloc(NBFilms * sizeof(FilmStruct*));
-    lesSalles = malloc(NBSalles * sizeof(SalleStruct*));
     printf("OK\n");
     int i = 0;
     for(filmNode = (lesFilmsNode->children)->next; filmNode; filmNode = filmNode->next)
@@ -135,7 +137,8 @@ void parserConfig()
             uneSalle->numero=atoi(numeroSalle);
             uneSalle->CAPACITE = atoi(capacite);
             uneSalle->NBPersonnes=0;
-            lesSalles[i] = uneSalle;
+            printf("ajouter Salle : \n");
+            lesSallesList=ajouterSalle(lesSallesList, uneSalle);
             i++;
             xmlFree(numeroSalle);
             xmlFree(capacite);
