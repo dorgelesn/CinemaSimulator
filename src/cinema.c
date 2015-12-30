@@ -22,7 +22,7 @@ int main()
     pthread_cond_init(&attendreAuto, NULL);
     pthread_cond_init(&dormirAuto,NULL);
     pthread_cond_init(&attendreAbonnee,NULL);
-    signal(SIGINT, netoyer);
+    signal(SIGINT, netoyerFin);
     
     srand(time(NULL));
     parserConfig();
@@ -34,6 +34,7 @@ int main()
     for(j = 0; j<(NbClients+Nbcaisses+NbcaissesAuto);j++)
     {
         tid[j]=(pthread_t)NULL;
+        arguments[j]=NULL;
     }
     
     afficherSalles();
@@ -44,6 +45,7 @@ int main()
         
     }*/
     sleep(3);
+    signal(SIGINT, netoyer);
     
     
     

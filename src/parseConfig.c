@@ -113,6 +113,7 @@ void parserConfig()
             unFilm->duree = atoi(filmDuree);
             unFilm->horaire = atoi(filmHoraire);
             unFilm->pegi = atoi(filmPegi);
+            unFilm->NbPlaceRefuse=0;
             lesFilms[i] = unFilm;
             i++;
             xmlFree(filmId);
@@ -123,7 +124,7 @@ void parserConfig()
             
         }
     }
-    i=0;
+
     for(salleNode = (lesSallesNode->children)->next; salleNode; salleNode = salleNode->next)
     {
         if(salleNode->type == XML_ELEMENT_NODE)
@@ -139,7 +140,6 @@ void parserConfig()
             uneSalle->NBPersonnes=0;
             printf("ajouter Salle : \n");
             lesSallesList=ajouterSalle(lesSallesList, uneSalle);
-            i++;
             xmlFree(numeroSalle);
             xmlFree(capacite);
             xmlFree(film);

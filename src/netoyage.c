@@ -24,9 +24,12 @@ static void netoyageArguments(){
     int i;
     for(i=0; i<(Nbcaisses+NbcaissesAuto+NbClients); i++)
     {
-        printf("netoygae de l'argument thread n° %d\n",i);
+        
         if(arguments[i]!=NULL)
-        free(arguments[i]);
+        {
+            printf("netoygae de l'argument thread n° %d\n",i);
+            free(arguments[i]);
+        }
     }
     printf("netoyage du tableau d'arguments\n");
     free(arguments);
@@ -49,12 +52,7 @@ static void netoyageFilms()
 //TODO
 static void netoyageSalles()
 {
-    int i;
-    for(i=0;i<NBSalles;i++)
-    {
-        printf("nettoyage de la salle n° %d\n",i);
-        //free(lesSalles[i]);
-    }
+    detruireLesSalles();
     //free(lesSalles);
 }
 
@@ -109,6 +107,7 @@ void netoyerFin(){
     
     //fermetureThreads();
     netoyageArguments();
+    free(tid);
     netoyageSalles();
     netoyageFilms();
     //pthread_attr_destroy();

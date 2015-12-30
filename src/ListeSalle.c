@@ -9,8 +9,26 @@ ListeSalle ajouterSalle(ListeSalle liste, SalleStruct* valeur)
     
 }
 
+ListeSalle supprimerElementEnTete()
+{
+    if(lesSallesList != NULL)
+    {
+        element* aRenvoyer = lesSallesList->nxt;
+        printf("netoyage de la salle n°%d\n",lesSallesList->val->numero);
+        free(lesSallesList->val);
+        free(lesSallesList);
+        return aRenvoyer;
+    }
+    else
+    {
+        return NULL;
+    }
+}
+
 void detruireLesSalles(){
-    
+    while((lesSallesList)!=NULL){
+        lesSallesList=supprimerElementEnTete();
+    }
 }
 
 void afficherSalles()

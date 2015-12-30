@@ -12,3 +12,4 @@ ListeSalle ajouterSalle(ListeSalle liste, SalleStruct* salle);
 
 void detruireLesSalles();
 void afficherSalles();
+ListeSalle supprimerElementEnTete();
