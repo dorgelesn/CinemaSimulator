@@ -7,6 +7,7 @@
 #include <signal.h>
 #include "../include/FilmStruct.h"
 #include "../include/SalleStruct.h"
+#include "../include/ListeSalle.h"
 #include "../include/caissiere.h"
 #include "../include/client.h"
 #include "../include/abonnee.h"
