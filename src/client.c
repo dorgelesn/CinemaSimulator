@@ -83,12 +83,32 @@ int choisirFilm(int i)
     if(laSalle == NULL)
     {
         printf("il n'y a plus de place pour le film %s\n",lesFilms[film]->titre);
+        lesFilms[film]->NbPlaceRefuse++;
+        if(lesFilms[film]->NbPlaceRefuse>=LimiteRefusPlace)
+        {
+            lesFilms[film]->NbPlaceRefuse=0;
+            if(NBSalles < NbSalleMax)
+            {
+                NBSalles++;
+                SalleStruct * uneSalle = malloc(sizeof(SalleStruct));
+                uneSalle->film=lesFilms[film];
+                uneSalle->numero=NBSalles;
+                uneSalle->CAPACITE = 80;
+                uneSalle->NBPersonnes=0;
+                printf("UneSalle à été ajoutée : \n");
+                lesSallesList=ajouterSalle(lesSallesList,uneSalle);
+                afficherSalles();
+                printf("client %d à acheté sa place pour le film %s dans la salle %d à la place %d\n",i,uneSalle->film->titre,uneSalle->numero,uneSalle->NBPersonnes+1);
+                (uneSalle->NBPersonnes)++;
+                return 1;
+            }
+        }
         int random = rand()%(100-0) +0;
         if(random >= 80)
         {
             printf("le client %d va essayer de voir un autre film\n",i);
             if(choisirFilm(i)==1)
-            {
+            {   
                 return 1;
             }
             else

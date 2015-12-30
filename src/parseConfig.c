@@ -138,7 +138,7 @@ void parserConfig()
             uneSalle->numero=atoi(numeroSalle);
             uneSalle->CAPACITE = atoi(capacite);
             uneSalle->NBPersonnes=0;
-            printf("ajouter Salle : \n");
+            //printf("ajouter Salle : \n");
             lesSallesList=ajouterSalle(lesSallesList, uneSalle);
             xmlFree(numeroSalle);
             xmlFree(capacite);

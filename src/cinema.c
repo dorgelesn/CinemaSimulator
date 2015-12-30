@@ -41,9 +41,9 @@ int main()
     //int testt;
     
     /*for(testt=0; testt < NBSalles; testt++){
-     printf("Salle n° %d film %s CAPACITE %d %d\n",lesSalles[testt]->numero, (lesSalles[testt]->film)->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
-        
-    }*/
+     *     printf("Salle n° %d film %s CAPACITE %d %d\n",lesSalles[testt]->numero, (lesSalles[testt]->film)->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
+     *        
+}*/
     sleep(3);
     signal(SIGINT, netoyer);
     
@@ -98,19 +98,22 @@ int main()
             pthread_create(tid+num,0,(void *(*)())fonc_client,numClient);
     }
     
-        sleep(20);
+    
+    //attend la fin de toutes les threads clients
+    for(num=Nbcaisses+NbcaissesAuto;num<NbClients+Nbcaisses+NbcaissesAuto;num ++)
+        pthread_join(tid[num],NULL);
+    
+    for(num=0; num<Nbcaisses+NbcaissesAuto;num++){
+        pthread_cancel(tid[num]);
+    }
+    
     printf("#########################################\n");
     printf("appels caisse %d\n",nbAppelCaisse);
     afficherSalles();
     printf("Abonnees :\n sont venus : %d\nOn eu leur billet :%d\n ",nbAbonnee, nbAbonneeAcheteBillet);
     printf("#########################################\n");
-    //attend la fin de toutes les threads clients
-    for(num=Nbcaisses+NbcaissesAuto;num<NbClients+Nbcaisses+NbcaissesAuto;num ++)
-        pthread_join(tid[num],NULL);
-    sleep(10);
-    for(num=0; num<Nbcaisses+NbcaissesAuto;num++){
-            pthread_cancel(tid[num]);
-    }
+    signal(SIGINT, netoyerFin);
+    sleep(20);
     netoyerFin();
     
     /* liberation des ressources");*/
