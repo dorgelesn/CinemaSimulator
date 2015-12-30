@@ -13,7 +13,9 @@
 #include "../include/argStruct.h"
 #include "../include/caisseAuto.h"
 #include "../include/getFilm.h"
+
 #include "../include/netoyage.h"
+
 //#define NBSalles 5
 //#define NBFilms 5
 pthread_t* tid;
@@ -25,6 +27,7 @@ SalleStruct ** lesSalles;
 FilmStruct ** lesFilms;
 
 int NBSalles;
+int NbSalleMax;
 int NBFilms;
 int nbClientsAttente;
 int nbClientsAttenteAuto;

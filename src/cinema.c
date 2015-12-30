@@ -13,6 +13,7 @@ int main()
     nbAbonneeAttente=0;
     nbAbonnee=0;
     nbAbonneeAcheteBillet=0;
+    NbSalleMax=0;
     int num;
     pthread_mutex_init(&mutex_attenteClient, NULL);
     pthread_cond_init(&attendre, NULL);

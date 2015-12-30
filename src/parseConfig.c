@@ -42,11 +42,14 @@ void parserConfig()
     char* NbcaissesAutoXML = (char*)xmlGetProp( cinema, (const xmlChar*)"nbCaissesAuto");
     char* NbClientsXML = (char*)xmlGetProp( cinema, (const xmlChar*)"nbClients" );
     char* PourcentAbonneeXML = (char*)xmlGetProp( cinema, (const xmlChar*)"PourcentAbonnee" );
+    char* NbSalleMaxXML = (char*)xmlGetProp( cinema, (const xmlChar*)"NbSalleMax" );
     Nbcaisses = atoi(NbcaissesXML);
     NbcaissesAuto = atoi(NbcaissesAutoXML);
     NbClients = atoi(NbClientsXML);
     PourcentAbonnee = atoi(PourcentAbonneeXML);
+    NbSalleMax = atoi(NbSalleMaxXML);
     
+    xmlFree(NbSalleMaxXML);
     xmlFree(NbcaissesXML);
     xmlFree(NbcaissesAutoXML);
     xmlFree(NbClientsXML);
