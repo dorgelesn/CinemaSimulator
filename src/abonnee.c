@@ -6,13 +6,13 @@ void * fonc_abonnee(void *i)
     nbAbonnee++;
     //50% des clients vont au caisses et 50% vont au caisses automatiques
     int random = rand()%(100-0) +0;
-        if(random>20)
+        if((random>20)&&(Nbcaisses!=0))
         {
             AcheterBilletAbonnee(arg->num);
             printf("L'abonnee %d à acheté son billet auprès d'une caissière\n", arg->num);
         }
         else
-            if(random<10)
+            if((random<10)&&(NbcaissesAuto!=0))
         {
             AcheterBilletAutoAbonnee(arg->num);
             printf("L'abonnee %d à acheté son billet à la caisse automatique\n", arg->num);

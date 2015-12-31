@@ -92,7 +92,7 @@ int main()
         argStruct* numClient=arguments[num];
         numClient->num = num-Nbcaisses-NbcaissesAuto;
         int rng = rand()%(100-0) +0;
-        if(rng<=PourcentAbonnee)
+        if(rng<PourcentAbonnee)
             pthread_create(tid+num,0,(void *(*)())fonc_abonnee,numClient);
         else        
             pthread_create(tid+num,0,(void *(*)())fonc_client,numClient);

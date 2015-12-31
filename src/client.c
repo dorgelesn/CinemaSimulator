@@ -6,13 +6,13 @@ void * fonc_client(void *i)
     argStruct *arg = i;
     //50% des clients vont au caisses et 50% vont au caisses automatiques
     int random = rand()%(100-0) +0;
-        if(random>60)
+        if((random<pourcentageDePersonnesAuCaisses)&&(Nbcaisses!=0))
         {
             AcheterBillet(arg->num);
             printf("Le client %d à acheté son billet auprès d'une caissière\n", arg->num);
         }
         else
-            if(random<30)
+            if((random<(pourcentageDePersonnesAuCaissesAuto+pourcentageDePersonnesAuCaisses))&&(NbcaissesAuto!=0))
         {
             AcheterBilletAuto(arg->num);
             printf("Le client %d à acheté son billet à la caisse automatique\n", arg->num);
