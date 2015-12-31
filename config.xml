@@ -14,8 +14,6 @@
         <film id="8" titre="Le nouveau" genre="comedie" duree="81" horaire="1" pegi="3"></film>
         <film id="9" titre="007 spectre" genre="action" duree="148" horaire="1" pegi="3"></film>
         <film id="10" titre="hunger games : la revelote seconde partie" genre="action" duree="136" horaire="1" pegi="3"></film>
-
-
         
     </lesFilms>
     

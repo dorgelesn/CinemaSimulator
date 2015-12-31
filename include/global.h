@@ -42,5 +42,7 @@ int NbcaissesAuto;
 int NbClients;
 int PourcentAbonnee;
 int LimiteRefusPlace;
+int pourcentageDePersonnesAuCaisses;
+int pourcentageDePersonnesAuCaissesAuto;
 //for esay cleaning of memory 
 argStruct ** arguments;
