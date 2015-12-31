@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<cinema nbCaisses="0" nbCaissesAuto="0" nbClients="1000" pourcentageDePersonnesAuCaisses="10" pourcentageDePersonnesAuCaissesAuto="0" PourcentAbonnee="2" NbSalleMax="15" LimiteRefusPlace="1">
+<cinema nbCaisses="8" nbCaissesAuto="4" nbClients="1000" pourcentageDePersonnesAuCaisses="50" pourcentageDePersonnesAuCaissesAuto="30" PourcentAbonnee="10" NbSalleMax="20" LimiteRefusPlace="10">
     
     <lesFilms>
         
