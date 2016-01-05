@@ -13,13 +13,12 @@
 #include "../include/client.h"
 #include "../include/abonnee.h"
 #include "../include/caisseAuto.h"
+#include "../include/managementSalles.h"
 #include "../include/getFilm.h"
-
 #include "../include/netoyage.h"
 
-//#define NBSalles 5
-//#define NBFilms 5
 pthread_t* tid;
+pthread_t* threadManagement;
 pthread_mutex_t mutex_attenteClient;
 pthread_cond_t attendre, dormir, attendreAuto, dormirAuto, attendreAbonnee;
 //SalleStruct * lesSalles[NBSalles];
@@ -34,6 +33,7 @@ int NbSalleMax;
 int NBFilms;
 int nbClientsAttente;
 int nbClientsAttenteAuto;
+int nbClientInternet;
 int nbAppelCaisse;
 int nbAbonneeAttente;
 int nbAbonnee;

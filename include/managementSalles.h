@@ -1,0 +1,1 @@
+void * fonc_managerSalles(void *i);

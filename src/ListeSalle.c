@@ -17,6 +17,9 @@ ListeSalle supprimerElementEnTete()
         printf("netoyage de la salle n°%d\n",lesSallesList->val->numero);
         pthread_cond_destroy(&(lesSallesList->val->filmTermine));
         pthread_cond_destroy(&(lesSallesList->val->conditionEntrerSalle));
+        pthread_cond_destroy(&(lesSallesList->val->demarrer));
+        pthread_cond_destroy(&(lesSallesList->val->toutLemondeDansLaSalle));
+        pthread_cond_destroy(&(lesSallesList->val->toutLemondeEstSorti));
         free(lesSallesList->val);
         free(lesSallesList);
         return aRenvoyer;

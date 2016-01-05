@@ -8,7 +8,7 @@ void VendreBillet(int numCaisse){
     if(nbClientsAttente == 0 && nbAbonneeAttente == 0)
     {
         printf("pas de clients à la caisse numero %d \n",numCaisse);
-        printf("appels caisse %d\n",nbAppelCaisse);	
+        //printf("appels caisse %d\n",nbAppelCaisse);	
         pthread_cond_wait(&dormir, &mutex_attenteClient);
         
         //	usleep(200000);	

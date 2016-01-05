@@ -14,6 +14,7 @@ int main()
     nbAbonnee=0;
     nbAbonneeAcheteBillet=0;
     NbSalleMax=0;
+    nbClientInternet=0;
     lesSallesList = NULL;
     int num;
     pthread_mutex_init(&mutex_attenteClient, NULL);
@@ -66,9 +67,16 @@ int main()
             pthread_create(tid+num,0,(void *(*)())fonc_caisse,numCaisse);
         }
     }
+    ListeSalle l = lesSallesList;
+    int h;
+    for(h=0;h<NBSalles;h++){
+        pthread_create(threadManagement+h,0,(void *(*)())fonc_managerSalles,l->val);
+        l=l->nxt;
+    }
+    sleep(10);
     
     //creation des threads clients /!\ fuite memoire
-    for(num=Nbcaisses+NbcaissesAuto;num<(NbClients+Nbcaisses+NbcaissesAuto)/2;num ++){
+    for(num=Nbcaisses+NbcaissesAuto;num<(NbClients+Nbcaisses+NbcaissesAuto);num ++){
         arguments[num] = malloc(sizeof(argStruct*));
         argStruct* numClient=arguments[num];
         numClient->num = num-Nbcaisses-NbcaissesAuto;
@@ -80,28 +88,13 @@ int main()
         else        
             pthread_create(tid+num,0,(void *(*)())fonc_client,numClient);
     }
-    sleep(10);
-    printf("#########################################\n");
-    printf("appels caisse %d\n",nbAppelCaisse);
-    afficherSalles();
-    printf("Abonnees :\n sont venus : %d\nOn eu leur billet :%d\n ",nbAbonnee, nbAbonneeAcheteBillet);
-    printf("#########################################\n");
-    sleep(10);
-    for(num=(NbClients+Nbcaisses+NbcaissesAuto)/2;num<(NbClients+Nbcaisses+NbcaissesAuto);num++){
-        arguments[num] = malloc(sizeof(argStruct*));
-        argStruct* numClient=arguments[num];
-        numClient->num = num-Nbcaisses-NbcaissesAuto;
-        int rng = rand()%(100-0) +0;
-        if(rng<PourcentAbonnee)
-            pthread_create(tid+num,0,(void *(*)())fonc_abonnee,numClient);
-        else        
-            pthread_create(tid+num,0,(void *(*)())fonc_client,numClient);
-    }
     
     
     //attend la fin de toutes les threads clients
     for(num=Nbcaisses+NbcaissesAuto;num<NbClients+Nbcaisses+NbcaissesAuto;num ++)
         pthread_join(tid[num],NULL);
+    
+    printf("###fin des clients###\n");
     
     for(num=0; num<Nbcaisses+NbcaissesAuto;num++){
         pthread_cancel(tid[num]);
@@ -113,7 +106,7 @@ int main()
     printf("Abonnees :\n sont venus : %d\nOn eu leur billet :%d\n ",nbAbonnee, nbAbonneeAcheteBillet);
     printf("#########################################\n");
     signal(SIGINT, netoyerFin);
-    sleep(20);
+    sleep(10);
     netoyerFin();
     
     /* liberation des ressources");*/

@@ -53,7 +53,21 @@ static void netoyageFilms()
 static void netoyageSalles()
 {
     detruireLesSalles();
-    //free(lesSalles);
+}
+
+void netoyageThreadManagement()
+{
+    int i;
+    for(i=0; i<NbSalleMax; i++)
+    {
+        if(threadManagement[i]!=(pthread_t)NULL)
+        {
+            printf("arrêt du thread Management n° %d\n",i);
+            pthread_cancel(threadManagement[i]);
+        }
+    }
+    printf("netoyage du tableau de pthread_t\n");
+    free(threadManagement);
 }
 
 
@@ -74,6 +88,7 @@ void netoyer(){
     pthread_cond_destroy(&attendreAuto);
     pthread_cond_destroy(&dormirAuto);
     pthread_cond_destroy(&attendreAbonnee);
+    netoyageThreadManagement();
     
     fermetureThreads();
     netoyageArguments();
@@ -106,6 +121,7 @@ void netoyerFin(){
     pthread_cond_destroy(&attendreAbonnee);
     
     //fermetureThreads();
+    netoyageThreadManagement();
     netoyageArguments();
     free(tid);
     netoyageSalles();

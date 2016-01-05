@@ -54,6 +54,13 @@ void parserConfig()
     LimiteRefusPlace=atoi(LimiteRefusPlaceXML);
     pourcentageDePersonnesAuCaisses = atoi(pourcentageDePersonnesAuCaissesXML);
     pourcentageDePersonnesAuCaissesAuto= atoi(pourcentageDePersonnesAuCaissesAutoXML);
+
+    threadManagement = malloc(NbSalleMax*sizeof(pthread_t));
+    int h;
+    for(h=0;h<NbSalleMax;h++){
+        threadManagement[h]=(pthread_t)NULL;
+    }
+    
     
     xmlFree(pourcentageDePersonnesAuCaissesXML);
     xmlFree(pourcentageDePersonnesAuCaissesAutoXML);
@@ -146,6 +153,11 @@ void parserConfig()
             uneSalle->NBPersonnes=0;
             pthread_cond_init(&(uneSalle->conditionEntrerSalle),NULL);
             pthread_cond_init(&(uneSalle->filmTermine),NULL);
+            pthread_cond_init(&(uneSalle->demarrer),NULL);
+            
+            pthread_cond_init(&(uneSalle->toutLemondeDansLaSalle),NULL);
+            pthread_cond_init(&(uneSalle->toutLemondeEstSorti),NULL);
+            
             //printf("ajouter Salle : \n");
             lesSallesList=ajouterSalle(lesSallesList, uneSalle);
             xmlFree(numeroSalle);
