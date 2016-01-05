@@ -1,4 +1,4 @@
 void * fonc_abonnee(void *i);
-void AcheterBilletAbonnee(int i);
-void AcheterBilletInternetAbonnee(int i);
-void AcheterBilletAutoAbonnee(int i);
+SalleStruct * AcheterBilletAbonnee(int i);
+SalleStruct * AcheterBilletInternetAbonnee(int i);
+SalleStruct * AcheterBilletAutoAbonnee(int i);

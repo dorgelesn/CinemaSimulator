@@ -1,27 +1,32 @@
 #include "../include/global.h"
-
+#define Salle SalleStruct
 
 void * fonc_client(void *i)
 {
     argStruct *arg = i;
     //50% des clients vont au caisses et 50% vont au caisses automatiques
+    Salle * maSalle=NULL;
+    
     int random = rand()%(100-0) +0;
-        if((random<pourcentageDePersonnesAuCaisses)&&(Nbcaisses!=0))
-        {
-            AcheterBillet(arg->num);
-            printf("Le client %d à acheté son billet auprès d'une caissière\n", arg->num);
-        }
-        else
-            if((random<(pourcentageDePersonnesAuCaissesAuto+pourcentageDePersonnesAuCaisses))&&(NbcaissesAuto!=0))
-        {
-            AcheterBilletAuto(arg->num);
-            printf("Le client %d à acheté son billet à la caisse automatique\n", arg->num);
-        }
-        else
-        {
-            AcheterBilletInternet(arg->num);
-            printf("Le client %d à acheté son billet sur internet\n", arg->num);
-        }
+    printf("Le client %d arrive \t",arg->num);
+    if((random<pourcentageDePersonnesAuCaisses)&&(Nbcaisses!=0))
+    {
+        maSalle=AcheterBillet(arg->num);
+        printf("Le client %d à acheté son billet auprès d'une caissière\n", arg->num);
+    }
+    else if((random<(pourcentageDePersonnesAuCaissesAuto+pourcentageDePersonnesAuCaisses))&&(NbcaissesAuto!=0))
+    {
+        maSalle=AcheterBilletAuto(arg->num);
+        printf("Le client %d à acheté son billet à la caisse automatique\n", arg->num);
+    }
+    else
+    {
+        maSalle=AcheterBilletInternet(arg->num);
+        printf("Le client %d à acheté son billet sur internet\n", arg->num);
+    }
+    
+    allerVoirFilm(maSalle, arg, "abonnee");
+    printf("Le client %d sort du cinema\n", arg->num);
     
     
     /* temps de vente */
@@ -29,56 +34,62 @@ void * fonc_client(void *i)
     return 0;
 }
 
-void AcheterBilletInternet(int i)
+Salle * AcheterBilletInternet(int i)
 {
     
     pthread_mutex_lock(&mutex_attenteClient);
+    Salle * laSalle=NULL;
     printf("Le client %d fait son achat sur internet \n",i);
-    choisirFilm(i);    
+    laSalle=choisirFilm(i);    
     pthread_mutex_unlock(&mutex_attenteClient);
+    return  laSalle;
     
 }
 
-void AcheterBillet(int i)
+Salle * AcheterBillet(int i)
 {
     
     pthread_mutex_lock(&mutex_attenteClient);
+    Salle * laSalle=NULL;
     nbClientsAttente++;
     pthread_cond_signal(&dormir);
     printf("Le client %d arrive \n",i);
     pthread_cond_wait(&attendre,&mutex_attenteClient);
-    choisirFilm(i);
+    laSalle=choisirFilm(i);
     
     nbClientsAttente --;
     pthread_mutex_unlock(&mutex_attenteClient);
+    return  laSalle;
     
 }
 
-void AcheterBilletAuto(int i)
+Salle * AcheterBilletAuto(int i)
 {
     
     pthread_mutex_lock(&mutex_attenteClient);
+    Salle * laSalle=NULL;
     nbClientsAttenteAuto++;
     pthread_cond_signal(&dormirAuto);
     printf("Le client %d arrive en caisse automatique\n",i);
     pthread_cond_wait(&attendreAuto,&mutex_attenteClient);
-    choisirFilm(i);
+    laSalle=choisirFilm(i);
     
     nbClientsAttenteAuto --;
     pthread_mutex_unlock(&mutex_attenteClient);
+    return  laSalle;
     
 }
 
 //le client choisis un film, si il n'y a plus de place il y a 80 % de chance
 // pour que le client quitte le cinema, sinon il choisis un autre film.
 
-int choisirFilm(int i)
+Salle * choisirFilm(int i)
 {
     
     int film = rand()%(NBFilms-0) +0;
     printf("client %d veut voir le film %s\n",i, lesFilms[film]->titre);
-    
-    SalleStruct * laSalle = choixSalle(lesFilms[film]);
+    SalleStruct * laSalle = NULL;
+    laSalle = choixSalle(lesFilms[film]);
     
     if(laSalle == NULL)
     {
@@ -100,43 +111,43 @@ int choisirFilm(int i)
                 afficherSalles();
                 printf("client %d à acheté sa place pour le film %s dans la salle %d à la place %d\n",i,uneSalle->film->titre,uneSalle->numero,uneSalle->NBPersonnes+1);
                 (uneSalle->NBPersonnes)++;
-                return 1;
+                return laSalle;
             }
         }
         int random = rand()%(100-0) +0;
         if(random >= 80)
         {
             printf("le client %d va essayer de voir un autre film\n",i);
-            if(choisirFilm(i)==1)
+            if(choisirFilm(i)==NULL)
             {   
-                return 1;
+                return NULL;
             }
             else
             {
-                return 0;
+                return laSalle;
             }
             
         }
         else{
             printf("le client %d sort du cinema car il n'y avait plus de place pour son film\n",i);
-            return 0;
+            return laSalle;
         }
-            
+        
         
     }
     else
     {
         printf("client %d à acheté sa place pour le film %s dans la salle %d à la place %d\n",i,laSalle->film->titre,laSalle->numero,laSalle->NBPersonnes+1);
         (laSalle->NBPersonnes)++;
-        return 1;
+        return laSalle;
     }
     
-    return 1;
+    return laSalle;
 }
 
 SalleStruct* choixSalle(FilmStruct * unFilm)
 {
-
+    
     element *tmp = lesSallesList;
     while(tmp != NULL)
     {
@@ -149,11 +160,26 @@ SalleStruct* choixSalle(FilmStruct * unFilm)
             
         }
         tmp = tmp->nxt;
-
+        
     }
     
     
     return NULL;
+}
+
+void allerVoirFilm(Salle * maSalle, argStruct * arg, char * type)
+{
+    pthread_mutex_lock(&mutex_attenteClient);
+    if(maSalle!=NULL)
+    {
+        printf("la salle !!!! %s\n", maSalle->film->titre);
+        printf("Le %s %d attend devant la salle\n", type, arg->num);
+        //attendre rentrer Salle
+        
+        printf("Le %s %d regarde son film\n", type, arg->num);
+        //attendre Fin film
+    }    
+    pthread_mutex_unlock(&mutex_attenteClient);
 }
 
 

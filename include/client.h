@@ -1,6 +1,7 @@
 void * fonc_client(void *i);
-void AcheterBillet(int i);
-void AcheterBilletInternet(int i);
-void AcheterBilletAuto(int i);
-int choisirFilm();
+SalleStruct * AcheterBillet(int i);
+SalleStruct * AcheterBilletInternet(int i);
+SalleStruct * AcheterBilletAuto(int i);
+SalleStruct *    choisirFilm();
 SalleStruct* choixSalle(FilmStruct * unFilm);
+void allerVoirFilm(SalleStruct * maSalle, argStruct * arg, char * type);

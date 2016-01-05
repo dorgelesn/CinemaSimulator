@@ -5,13 +5,13 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <signal.h>
+#include "../include/argStruct.h"
 #include "../include/FilmStruct.h"
 #include "../include/SalleStruct.h"
 #include "../include/ListeSalle.h"
 #include "../include/caissiere.h"
 #include "../include/client.h"
 #include "../include/abonnee.h"
-#include "../include/argStruct.h"
 #include "../include/caisseAuto.h"
 #include "../include/getFilm.h"
 
@@ -27,6 +27,8 @@ pthread_cond_t attendre, dormir, attendreAuto, dormirAuto, attendreAbonnee;
 ListeSalle lesSallesList;
 //SalleStruct ** lesSalles;
 FilmStruct ** lesFilms;
+pthread_cond_t* conditionEntrerSalle;
+pthread_cond_t* filmTermine;
 
 int NBSalles;
 int NbSalleMax;
