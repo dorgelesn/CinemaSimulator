@@ -27,8 +27,7 @@ pthread_cond_t attendre, dormir, attendreAuto, dormirAuto, attendreAbonnee;
 ListeSalle lesSallesList;
 //SalleStruct ** lesSalles;
 FilmStruct ** lesFilms;
-pthread_cond_t* conditionEntrerSalle;
-pthread_cond_t* filmTermine;
+
 
 int NBSalles;
 int NbSalleMax;

@@ -15,6 +15,8 @@ ListeSalle supprimerElementEnTete()
     {
         element* aRenvoyer = lesSallesList->nxt;
         printf("netoyage de la salle n°%d\n",lesSallesList->val->numero);
+        pthread_cond_destroy(&(lesSallesList->val->filmTermine));
+        pthread_cond_destroy(&(lesSallesList->val->conditionEntrerSalle));
         free(lesSallesList->val);
         free(lesSallesList);
         return aRenvoyer;
@@ -26,7 +28,8 @@ ListeSalle supprimerElementEnTete()
 }
 
 void detruireLesSalles(){
-    while((lesSallesList)!=NULL){
+    while((lesSallesList)!=NULL)
+    {
         lesSallesList=supprimerElementEnTete();
     }
 }

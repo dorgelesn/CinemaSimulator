@@ -49,7 +49,7 @@ static void netoyageFilms()
     free(lesFilms);
     
 }
-//TODO
+
 static void netoyageSalles()
 {
     detruireLesSalles();

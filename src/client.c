@@ -106,6 +106,8 @@ Salle * choisirFilm(int i)
                 uneSalle->numero=NBSalles;
                 uneSalle->CAPACITE = 80;
                 uneSalle->NBPersonnes=0;
+                pthread_cond_init(&(uneSalle->conditionEntrerSalle),NULL);
+                pthread_cond_init(&(uneSalle->filmTermine),NULL);
                 printf("UneSalle à été ajoutée : \n");
                 lesSallesList=ajouterSalle(lesSallesList,uneSalle);
                 afficherSalles();

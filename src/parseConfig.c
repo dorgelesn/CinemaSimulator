@@ -144,6 +144,8 @@ void parserConfig()
             uneSalle->numero=atoi(numeroSalle);
             uneSalle->CAPACITE = atoi(capacite);
             uneSalle->NBPersonnes=0;
+            pthread_cond_init(&(uneSalle->conditionEntrerSalle),NULL);
+            pthread_cond_init(&(uneSalle->filmTermine),NULL);
             //printf("ajouter Salle : \n");
             lesSallesList=ajouterSalle(lesSallesList, uneSalle);
             xmlFree(numeroSalle);
