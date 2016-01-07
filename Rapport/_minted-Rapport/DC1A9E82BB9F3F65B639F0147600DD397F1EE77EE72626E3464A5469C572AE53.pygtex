@@ -2,7 +2,8 @@
 \PYGdefault{k+kt}{pthread\PYGdefaultZus{}t}\PYGdefault{o}{*} \PYGdefault{n}{tid}\PYGdefault{p}{;} \PYGdefault{c+c1}{//tableau des threads client et caisses}
 \PYGdefault{k+kt}{pthread\PYGdefaultZus{}t}\PYGdefault{o}{*} \PYGdefault{n}{threadManagement}\PYGdefault{p}{;} \PYGdefault{c+c1}{//tableau des thread gérant les séances dans les salles}
 \PYGdefault{k+kt}{pthread\PYGdefaultZus{}mutex\PYGdefaultZus{}t} \PYGdefault{n}{mutex\PYGdefaultZus{}attenteClient}\PYGdefault{p}{;} \PYGdefault{c+c1}{//mutex principal}
-\PYGdefault{k+kt}{pthread\PYGdefaultZus{}cond\PYGdefaultZus{}t} \PYGdefault{n}{attendre}\PYGdefault{p}{,} \PYGdefault{n}{dormir}\PYGdefault{p}{,} \PYGdefault{n}{attendreAuto}\PYGdefault{p}{,} \PYGdefault{n}{dormirAuto}\PYGdefault{p}{,} \PYGdefault{n}{attendreAbonnee}\PYGdefault{p}{,} \PYGdefault{n}{demarrer}\PYGdefault{p}{,} \PYGdefault{n}{conditionEntrerSalle}\PYGdefault{p}{;} \PYGdefault{c+c1}{//conditions}
+\PYGdefault{k+kt}{pthread\PYGdefaultZus{}cond\PYGdefaultZus{}t} \PYGdefault{n}{attendre}\PYGdefault{p}{,} \PYGdefault{n}{dormir}\PYGdefault{p}{,} \PYGdefault{n}{attendreAuto}\PYGdefault{p}{,} \PYGdefault{n}{dormirAuto}\PYGdefault{p}{,}
+ \PYGdefault{n}{attendreAbonnee}\PYGdefault{p}{,} \PYGdefault{n}{demarrer}\PYGdefault{p}{,} \PYGdefault{n}{conditionEntrerSalle}\PYGdefault{p}{;} \PYGdefault{c+c1}{//conditions}
 \PYGdefault{n}{ListeSalle} \PYGdefault{n}{lesSallesList}\PYGdefault{p}{;} \PYGdefault{c+c1}{//stockage des salles}
 \PYGdefault{n}{FilmStruct} \PYGdefault{o}{**} \PYGdefault{n}{lesFilms}\PYGdefault{p}{;} \PYGdefault{c+c1}{// stockage des films}
 

@@ -110,23 +110,24 @@ Ainsi les caissières ne disposent d'aucune information sur les clients.
 \end{itemize}
 
 \subsection{Objectifs atteints}
-J'ai atteins tous les objectifs expliqués dans la partie précédente sauf le fait que les personnes entre dans les salles regardent un film d'une certaine durée et sortent du cinema à la fin. En effet j'ai une seconde version du projet qui a cette
-cette fonctionnalité d'implémentée mais elle est buggée. Dans certains cas plus ou moins rares mes threads restent bloqués dans une situation d'inter-blocage et le programme ne se termine jamais.
+J'ai atteins tous les objectifs expliqués dans la partie précédente sauf le fait d'avoir plusieurs séances dans la même salle. En effet j'ai une seconde version du projet qui a cette
+cette fonctionnalité d'implémentée mais elle est boguée. Dans certains cas plus ou moins rares mes threads restent bloqués dans une situation d'inter-blocage et le programme ne se termine jamais.
 Du fait de la rareté du bug et de la manière difficile de le déboguer je n'ai pas pu le résoudre. J'ai donc prévu de rendre un projet propre et fonctionnel plutôt qu'une version "Améliorée" qui ne fonctionne pas de manière sure.
 \subsection{Nettoyage de la mémoire}
-Au niveau du nettoyage de la mémoire je libère tout l'espace mémoire à la fin de mon programme et l'interrompt tous les threads qui tournent encore si l'on fait un ctrl+c.
+Au niveau du nettoyage de la mémoire je libère tout l'espace mémoire à la fin de mon programme et j'interromps tous les threads qui tournent encore si l'on fait un ctrl+c.
 
 \subsection{Difficultés rencontrées}
 
 \begin{itemize}
- \item Problème d'inter-blocage, Comme parlé plus haut, je me suis retrouvé confronté à un problème d'inter-blocage, ce qui m'a conduit à devoir réduire la quantité de fonctionnalités que je voulais implémenter. de plus ce genre de problème est très dur à résoudre car l'utilisation du débogueur est impossible.
+ \item Problème d'inter-blocage, Comme parlé plus haut, je me suis retrouvé confronté à un problème d'inter-blocage, ce qui m'a conduit à devoir réduire la quantité de fonctionnalités que je voulais implémenter. De plus ce genre de problème est très dur à résoudre car l'utilisation du débogueur est impossible.
 \end{itemize}
 
 \chapter{Conception}
 \section{La structure du programme}
 \subsection{Réseau de pétri :}
 
-Durant ma phase d'analyse, j'ai représenté un réseau de pétri pour avoir un support sur lequel m'appuyer pour voir le fonctionnement de la synchronisation de mes threads. :
+Durant ma phase d'analyse, j'ai représenté un réseau de pétri pour avoir un support sur lequel m'appuyer pour voir le fonctionnement de la synchronisation de mes threads. 
+
 Le schéma ci dessous représente un cas avec une seule caisse, pour des raisons de simplifications du schéma. 
 
 \begin{figure}[h]
@@ -176,7 +177,8 @@ Ma seconde structure est la structure SalleStruct qui permet de représenter une
 pthread_t* tid; //tableau des threads client et caisses
 pthread_t* threadManagement; //tableau des thread gérant les séances dans les salles
 pthread_mutex_t mutex_attenteClient; //mutex principal
-pthread_cond_t attendre, dormir, attendreAuto, dormirAuto, attendreAbonnee, demarrer, conditionEntrerSalle; //conditions
+pthread_cond_t attendre, dormir, attendreAuto, dormirAuto,
+ attendreAbonnee, demarrer, conditionEntrerSalle; //conditions
 ListeSalle lesSallesList; //stockage des salles
 FilmStruct ** lesFilms; // stockage des films
 
@@ -226,11 +228,17 @@ PourcentAbonnee="10"
 NbSalleMax="20" 
 LimiteRefusPlace="10">
 \end{minted}
-nbCaisses : pour le Nombre de caisse qu'il y aura dans notre cinéma.
-nbCaissesAuto : pour le nombre de caisses automatiques.
-nbClients bien sur on peut modifier le nombre de clients.
-pourcentageDePersonnesAuCaisses : pourcentage des personnes qui vont au caisses avec caissière. pourcentageDePersonnesAuCaissesAuto : pourcentage des personnes qui vont au caisses automatiques. (Si le pourcentage de personnes qui vont au caisses automatique + le pourcentage de personnes qui vont au caisse avec caissière est plus petit que 100 alors le reste des client prendra la place sur internet.) PourcentAbonnee : Pourcentage d'abonnés
-NbSalleMax : Nombre maximum de salle dans le cinéma. (En effet si je gère le fait de rajouter des salles dans le cinéma lorsque des salles sont pleine et qu'il y a de la demande pour un film, Il faut quand même un maximum car dans la réalité aucun cinéma ne dispose d'une infinité de salles, mais ils disposent généralement de quelques salles supplémentaires et c'est ce que j'ai voulu représenter.) LimiteRefusPlace : Nombre de places à refuser pour un film si la salle est pleine avant de rajouter une salle.
+
+\begin{itemize}
+
+
+\item nbCaisses : pour le Nombre de caisse qu'il y aura dans notre cinéma.
+\item nbCaissesAuto : pour le nombre de caisses automatiques.
+\item nbClients bien sur on peut modifier le nombre de clients.
+\item pourcentageDePersonnesAuCaisses : pourcentage des personnes qui vont au caisses avec caissière. \item pourcentageDePersonnesAuCaissesAuto : pourcentage des personnes qui vont au caisses automatiques. (Si le pourcentage de personnes qui vont au caisses automatique + le pourcentage de personnes qui vont au caisse avec caissière est plus petit que 100 alors le reste des client prendra la place sur internet.) \item PourcentAbonnee : Pourcentage d'abonnés
+\item NbSalleMax : Nombre maximum de salle dans le cinéma. (En effet si je gère le fait de rajouter des salles dans le cinéma lorsque des salles sont pleine et qu'il y a de la demande pour un film, Il faut quand même un maximum car dans la réalité aucun cinéma ne dispose d'une infinité de salles, mais ils disposent généralement de quelques salles supplémentaires et c'est ce que j'ai voulu représenter.) LimiteRefusPlace : Nombre de places à refuser pour un film si la salle est pleine avant de rajouter une salle.
+\end{itemize}
+
 
 Ensuite nous avons les objets films. On peut en rajouter ou en enlever si l'on souhaite. La structure de l'objet xml est exactement la même que ma structure FilmStruct décrite plus haut.
 \begin{minted}{xml}
@@ -254,7 +262,7 @@ Et le dernier objet est l'objet salle, on peut aussi en enlever et en ajouter au
 \section{Améliorations possibles}
 Mon projet de simulateur de cinéma est améliorable. Au début je souhaitait qu'il y ait plusieurs séance d'un film tout au long de l'exécution du programme. En effet une fois la salle remplie, on aurait pu lancer le film, et ainsi à la fin du film, lorsque les clients sont sortis on aurait pu reprogrammer une séance.
 
-J'aurais aussi voulu aller encore plus loin dans la simulation. Plutôt que de vendre les billets et regarder les films, j'aurais souhaité ajouter la phase d'attente devant la porte de la salle ainsi qu'une une phase d'attente de démarrage du film. Il aurait fallu gérer le fait que les clients de la séance précédente sortent de la salle et que les nouveaux clients entrent dans la salle. On aurait même pu prendre les billets pour les séances prochaines avant que la salle soit remplie.
+J'aurais aussi voulu aller encore plus loin dans la simulation. Plutôt que de vendre les billets et regarder les films, j'aurais souhaité ajouter la phase d'attente devant la porte de la salle ainsi qu'une une phase d'attente de démarrage du film. Il aurait fallu gérer le fait que les clients de la séance précédente sortent de la salle et que les nouveaux clients entrent dans la salle. On aurait même pu prendre les billets pour les séances prochaines avant que la salle ne soit remplie.
 
 J'ai aussi envisagé de créer une interface graphique en Ncurse car la sortie sur le terminal est presque incompréhensible avec un grand nombre de client. Ainsi on aurait pu avoir un affichage des salles, et des caisses avec un compteur pour chacune d'entre elle pour indiquer le nombre de personnes. Ainsi qu'un affichage des ressources critiques.
 \section{Conclusion}
