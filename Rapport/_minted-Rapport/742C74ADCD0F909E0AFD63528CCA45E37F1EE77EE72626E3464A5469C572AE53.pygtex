@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{k+kt}{pthread\PYGdefaultZus{}t}\PYGdefault{o}{*} \PYGdefault{n}{tid}\PYGdefault{p}{;} \PYGdefault{c+c1}{//tableau des threads client et caisses}
+\PYGdefault{k+kt}{pthread\PYGdefaultZus{}t}\PYGdefault{o}{*} \PYGdefault{n}{threadManagement}\PYGdefault{p}{;} \PYGdefault{c+c1}{//tableau des thread gérant les séances dans les salles}
+\PYGdefault{k+kt}{pthread\PYGdefaultZus{}mutex\PYGdefaultZus{}t} \PYGdefault{n}{mutex\PYGdefaultZus{}attenteClient}\PYGdefault{p}{;} \PYGdefault{c+c1}{//mutex principal}
+\PYGdefault{k+kt}{pthread\PYGdefaultZus{}cond\PYGdefaultZus{}t} \PYGdefault{n}{attendre}\PYGdefault{p}{,} \PYGdefault{n}{dormir}\PYGdefault{p}{,} \PYGdefault{n}{attendreAuto}\PYGdefault{p}{,} \PYGdefault{n}{dormirAuto}\PYGdefault{p}{,} \PYGdefault{n}{attendreAbonnee}\PYGdefault{p}{,} \PYGdefault{n}{demarrer}\PYGdefault{p}{,} \PYGdefault{n}{conditionEntrerSalle}\PYGdefault{p}{;} \PYGdefault{c+c1}{//conditions}
+\PYGdefault{n}{ListeSalle} \PYGdefault{n}{lesSallesList}\PYGdefault{p}{;} \PYGdefault{c+c1}{//stockage des salles}
+\PYGdefault{n}{FilmStruct} \PYGdefault{o}{**} \PYGdefault{n}{lesFilms}\PYGdefault{p}{;} \PYGdefault{c+c1}{// stockage des films}
+
+
+\PYGdefault{k+kt}{int} \PYGdefault{n}{NBSalles}\PYGdefault{p}{;} \PYGdefault{c+c1}{// Nombre de salles}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{NbSalleMax}\PYGdefault{p}{;} \PYGdefault{c+c1}{//Nombre de salles maximum}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{NBFilms}\PYGdefault{p}{;} \PYGdefault{c+c1}{//Nombre de films}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{nbClientsAttente}\PYGdefault{p}{;} \PYGdefault{c+c1}{// nombre de clients en attente au caisses}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{nbClientsAttenteAuto}\PYGdefault{p}{;} \PYGdefault{c+c1}{//nombre de client en attente au caisse automatiques}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{nbClientInternet}\PYGdefault{p}{;} \PYGdefault{c+c1}{//nombre de client qui commandent sur internet}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{nbAppelCaisse}\PYGdefault{p}{;} \PYGdefault{c+c1}{//nombre de clients passés en caisse}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{nbAbonneeAttente}\PYGdefault{p}{;} \PYGdefault{c+c1}{//nombre d\PYGdefaultZsq{}abonnés en attente}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{nbAbonneeAcheteBillet}\PYGdefault{p}{;} \PYGdefault{c+c1}{//nombre d\PYGdefaultZsq{}abonnés qui on pu acheter leur billet}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{Nbcaisses}\PYGdefault{p}{;} \PYGdefault{c+c1}{//nombre de caisses}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{NbcaissesAuto}\PYGdefault{p}{;} \PYGdefault{c+c1}{//nombre de caisses automatiques}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{NbClients}\PYGdefault{p}{;} \PYGdefault{c+c1}{//nombre de clients}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{PourcentAbonnee}\PYGdefault{p}{;} \PYGdefault{c+c1}{//pourcentage d\PYGdefaultZsq{}abonnés parmi les clients}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{LimiteRefusPlace}\PYGdefault{p}{;} \PYGdefault{c+c1}{//limite de refus de place pour un film avant de réouvrir une salle}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{pourcentageDePersonnesAuCaisses}\PYGdefault{p}{;} \PYGdefault{c+c1}{//pourcentage de personnes qui vont au caisses}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{pourcentageDePersonnesAuCaissesAuto}\PYGdefault{p}{;} \PYGdefault{c+c1}{//pourcentage de personnes au vont au}
+					\PYGdefault{c+c1}{//caisses automatiques}
+\PYGdefault{n}{argStruct} \PYGdefault{o}{**} \PYGdefault{n}{arguments}\PYGdefault{p}{;} \PYGdefault{c+c1}{//tableau des arguments passé au threads}
+			\PYGdefault{c+c1}{//(juste pour le nettoyer facilement)}
+\end{Verbatim}

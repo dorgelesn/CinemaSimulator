@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYGdefault{k}{typedef} \PYGdefault{k}{struct} \PYGdefault{n}{SalleStruct}\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{CAPACITE}\PYGdefault{p}{;}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{NBPersonnes}\PYGdefault{p}{;}
+    \PYGdefault{n}{FilmStruct} \PYGdefault{o}{*} \PYGdefault{n}{film}\PYGdefault{p}{;}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{numero}\PYGdefault{p}{;}
+
+\PYGdefault{p}{\PYGdefaultZcb{}}\PYGdefault{n}{SalleStruct}\PYGdefault{p}{;}
+\end{Verbatim}

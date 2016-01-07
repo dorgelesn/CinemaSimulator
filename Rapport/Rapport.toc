@@ -1,9 +1,20 @@
 \select@language {french}
-\contentsline {part}{I\hspace {1em}Introduction}{2}
-\contentsline {part}{II\hspace {1em}Analyse du sujet}{2}
-\contentsline {section}{\numberline {1}Sujet}{2}
-\contentsline {section}{\numberline {2}Objectifs}{2}
-\contentsline {subsection}{\numberline {2.1}Les objectifs fix\IeC {\'e}s :}{2}
-\contentsline {subsection}{\numberline {2.2}Les moyens pour parvenir \IeC {\`a} mes objectifs}{2}
-\contentsline {subsection}{\numberline {2.3}Objectifs atteints}{2}
-\contentsline {subsection}{\numberline {2.4}Nettoyage de la m\IeC {\'e}moire}{3}
+\contentsline {chapter}{\numberline {1}Introduction}{2}
+\contentsline {chapter}{\numberline {2}Analyse du sujet}{3}
+\contentsline {section}{\numberline {2.1}Sujet}{3}
+\contentsline {section}{\numberline {2.2}Objectifs}{3}
+\contentsline {subsection}{\numberline {2.2.1}Les objectifs fix\IeC {\'e}s :}{3}
+\contentsline {subsection}{\numberline {2.2.2}Les moyens pour parvenir \IeC {\`a} mes objectifs}{3}
+\contentsline {subsection}{\numberline {2.2.3}Objectifs atteints}{4}
+\contentsline {subsection}{\numberline {2.2.4}Nettoyage de la m\IeC {\'e}moire}{4}
+\contentsline {subsection}{\numberline {2.2.5}Difficult\IeC {\'e}s rencontr\IeC {\'e}es}{4}
+\contentsline {chapter}{\numberline {3}Conception}{5}
+\contentsline {section}{\numberline {3.1}La structure du programme}{5}
+\contentsline {subsection}{\numberline {3.1.1}R\IeC {\'e}seau de p\IeC {\'e}tri :}{5}
+\contentsline {subsection}{\numberline {3.1.2}Les structures et variables globales}{6}
+\contentsline {subsubsection}{Les variables Globales : }{6}
+\contentsline {subsection}{\numberline {3.1.3}Stockage des Salles}{7}
+\contentsline {subsection}{\numberline {3.1.4}Fichier de configuration}{7}
+\contentsline {chapter}{\numberline {4}Am\IeC {\'e}liorations possibles et conclusion}{9}
+\contentsline {section}{\numberline {4.1}Am\IeC {\'e}liorations possibles}{9}
+\contentsline {section}{\numberline {4.2}Conclusion}{9}

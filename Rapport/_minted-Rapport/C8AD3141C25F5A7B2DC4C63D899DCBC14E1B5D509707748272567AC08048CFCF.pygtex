@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{n+nt}{\PYGdefaultZlt{}film} \PYGdefault{n+na}{id=}\PYGdefault{l+s}{\PYGdefaultZdq{}1\PYGdefaultZdq{}}
+ \PYGdefault{n+na}{titre=}\PYGdefault{l+s}{\PYGdefaultZdq{}Star wars : le réveil de la force\PYGdefaultZdq{}}
+ \PYGdefault{n+na}{genre=}\PYGdefault{l+s}{\PYGdefaultZdq{}science fiction\PYGdefaultZdq{}}
+ \PYGdefault{n+na}{duree=}\PYGdefault{l+s}{\PYGdefaultZdq{}136\PYGdefaultZdq{}}
+ \PYGdefault{n+na}{horaire=}\PYGdefault{l+s}{\PYGdefaultZdq{}1\PYGdefaultZdq{}}
+ \PYGdefault{n+na}{pegi=}\PYGdefault{l+s}{\PYGdefaultZdq{}12\PYGdefaultZdq{}}\PYGdefault{n+nt}{\PYGdefaultZgt{}}
+ \PYGdefault{n+nt}{\PYGdefaultZlt{}/film\PYGdefaultZgt{}}
+\end{Verbatim}

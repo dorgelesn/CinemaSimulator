@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{n+nt}{\PYGdefaultZlt{}cinema} \PYGdefault{n+na}{nbCaisses=}\PYGdefault{l+s}{\PYGdefaultZdq{}8\PYGdefaultZdq{}}
+\PYGdefault{n+na}{nbCaissesAuto=}\PYGdefault{l+s}{\PYGdefaultZdq{}4\PYGdefaultZdq{}}
+\PYGdefault{n+na}{nbClients=}\PYGdefault{l+s}{\PYGdefaultZdq{}1000\PYGdefaultZdq{}}
+\PYGdefault{n+na}{pourcentageDePersonnesAuCaisses=}\PYGdefault{l+s}{\PYGdefaultZdq{}50\PYGdefaultZdq{}}
+\PYGdefault{n+na}{pourcentageDePersonnesAuCaissesAuto=}\PYGdefault{l+s}{\PYGdefaultZdq{}30\PYGdefaultZdq{}}
+\PYGdefault{n+na}{PourcentAbonnee=}\PYGdefault{l+s}{\PYGdefaultZdq{}10\PYGdefaultZdq{}}
+\PYGdefault{n+na}{NbSalleMax=}\PYGdefault{l+s}{\PYGdefaultZdq{}20\PYGdefaultZdq{}}
+\PYGdefault{n+na}{LimiteRefusPlace=}\PYGdefault{l+s}{\PYGdefaultZdq{}10\PYGdefaultZdq{}}\PYGdefault{n+nt}{\PYGdefaultZgt{}}
+\end{Verbatim}

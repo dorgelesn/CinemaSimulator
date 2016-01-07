@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+ \PYGdefault{k}{typedef} \PYGdefault{k}{struct} \PYGdefault{n}{FilmStruct}\PYGdefault{p}{\PYGdefaultZob{}}
+
+    \PYGdefault{k+kt}{char} \PYGdefault{o}{*}\PYGdefault{n}{titre}\PYGdefault{p}{;}
+    \PYGdefault{k+kt}{char} \PYGdefault{o}{*}\PYGdefault{n}{genre}\PYGdefault{p}{;}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{duree}\PYGdefault{p}{;}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{horaire}\PYGdefault{p}{;}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{pegi}\PYGdefault{p}{;}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{id}\PYGdefault{p}{;}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{NbPlaceRefuse}\PYGdefault{p}{;}
+
+\PYGdefault{p}{\PYGdefaultZcb{}}\PYGdefault{n}{FilmStruct}\PYGdefault{p}{;}
+\end{Verbatim}
