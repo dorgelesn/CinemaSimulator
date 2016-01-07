@@ -4,6 +4,7 @@ typedef struct SalleStruct{
     FilmStruct * film;
     int numero;
     int personnesAttendent;
+    int personnesAttendent2;
     
     pthread_cond_t conditionEntrerSalle;
     pthread_cond_t toutLemondeDansLaSalle;

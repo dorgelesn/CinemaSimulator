@@ -15,6 +15,7 @@ int main()
     nbAbonneeAcheteBillet=0;
     NbSalleMax=0;
     nbClientInternet=0;
+    passed=0;
     lesSallesList = NULL;
     int num;
     pthread_mutex_init(&mutex_attenteClient, NULL);
@@ -22,6 +23,8 @@ int main()
     pthread_cond_init(&dormir,NULL);
     pthread_cond_init(&attendreAuto, NULL);
     pthread_cond_init(&dormirAuto,NULL);
+    pthread_cond_init(&conditionEntrerSalle, NULL);
+    pthread_cond_init(&demarrer,NULL);
     pthread_cond_init(&attendreAbonnee,NULL);
     signal(SIGINT, netoyerFin);
     

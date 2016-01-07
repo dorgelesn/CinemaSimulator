@@ -20,7 +20,7 @@
 pthread_t* tid;
 pthread_t* threadManagement;
 pthread_mutex_t mutex_attenteClient;
-pthread_cond_t attendre, dormir, attendreAuto, dormirAuto, attendreAbonnee;
+pthread_cond_t attendre, dormir, attendreAuto, dormirAuto, attendreAbonnee, demarrer, conditionEntrerSalle;
 //SalleStruct * lesSalles[NBSalles];
 //FilmStruct * lesFilms[NBFilms];
 ListeSalle lesSallesList;
@@ -28,6 +28,7 @@ ListeSalle lesSallesList;
 FilmStruct ** lesFilms;
 
 
+int passed;
 int NBSalles;
 int NbSalleMax;
 int NBFilms;
@@ -36,6 +37,7 @@ int nbClientsAttenteAuto;
 int nbClientInternet;
 int nbAppelCaisse;
 int nbAbonneeAttente;
+int lancerFilms;
 int nbAbonnee;
 int nbAbonneeAcheteBillet;
 int Nbcaisses;

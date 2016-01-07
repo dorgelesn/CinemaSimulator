@@ -25,15 +25,7 @@ void * fonc_abonnee(void *i)
             printf("L'abonnee %d à acheté son billet sur internet\n", arg->num);
         }
         
-        if(nbClientsAttenteAuto==0 && nbClientsAttente==0)
-        {
-            int i;
-            ListeSalle l = lesSallesList;
-            for(i=0;i<NBSalles;i++){
-                pthread_cond_signal(&(l->val->demarrer));
-                l=l->nxt;
-            }
-        }
+        checkFileDattente();
         
         allerVoirFilm(maSalle, arg, "abonnee");
         printf("L'abonnee %d sort du cinema\n", arg->num);
@@ -56,6 +48,7 @@ Salle * AcheterBilletInternetAbonnee(int i)
         nbAbonneeAcheteBillet++;
         
     }
+   // checkFileDattente();
     pthread_mutex_unlock(&mutex_attenteClient);
     return  laSalle;
     
@@ -77,6 +70,7 @@ Salle * AcheterBilletAbonnee(int i)
         nbAbonneeAcheteBillet++;
     }
     nbAbonneeAttente --;
+   // checkFileDattente();
     pthread_mutex_unlock(&mutex_attenteClient);
     return  laSalle;
     
@@ -97,7 +91,7 @@ Salle * AcheterBilletAutoAbonnee(int i)
         nbAbonneeAcheteBillet++;
     }
     nbClientsAttenteAuto --;
-    
+    //checkFileDattente();
     pthread_mutex_unlock(&mutex_attenteClient);
     return  laSalle;    
     

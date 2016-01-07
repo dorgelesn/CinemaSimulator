@@ -151,6 +151,8 @@ void parserConfig()
             uneSalle->numero=atoi(numeroSalle);
             uneSalle->CAPACITE = atoi(capacite);
             uneSalle->NBPersonnes=0;
+            uneSalle->personnesAttendent2=0;
+            uneSalle->personnesAttendent=0;
             pthread_cond_init(&(uneSalle->conditionEntrerSalle),NULL);
             pthread_cond_init(&(uneSalle->filmTermine),NULL);
             pthread_cond_init(&(uneSalle->demarrer),NULL);

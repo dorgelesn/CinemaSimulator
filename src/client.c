@@ -3,6 +3,7 @@
 
 void * fonc_client(void *i)
 {
+
     argStruct *arg = i;
     //50% des clients vont au caisses et 50% vont au caisses automatiques
     Salle * maSalle=NULL;
@@ -24,7 +25,6 @@ void * fonc_client(void *i)
         maSalle=AcheterBilletInternet(arg->num);
         printf("Le client %d à acheté son billet sur internet\n", arg->num);
     }
-    
     checkFileDattente();
     allerVoirFilm(maSalle, arg, "client");
     printf("Le client %d sort du cinema\n", arg->num);
@@ -37,14 +37,12 @@ void * fonc_client(void *i)
 void checkFileDattente(){
     pthread_mutex_lock(&mutex_attenteClient);
     
-    if(nbClientsAttenteAuto==0 && nbClientsAttente==0 &&nbClientInternet==0 &&nbAbonneeAttente==0)
+    if(nbClientsAttenteAuto==0 && nbClientsAttente==0 &&nbClientInternet==0 &&nbAbonneeAttente==0 && passed==0)
     {
-        //printf("#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n#######################################\n");
-        
+
         ListeSalle l = lesSallesList;
         do{
-            //printf("toto %d %s\n", l->val->demarrer, l->val->film->titre );
-            pthread_cond_signal(&(l->val->demarrer));
+            pthread_cond_broadcast(&(demarrer));
             l=l->nxt;
         }while(l!=NULL);
     }
@@ -62,6 +60,7 @@ Salle * AcheterBilletInternet(int i)
     printf("Le client %d fait son achat sur internet \n",i);
     laSalle=choisirFilm(i);
     nbClientInternet--;
+    //checkFileDattente();
     pthread_mutex_unlock(&mutex_attenteClient);
     return  laSalle;
     
@@ -79,6 +78,7 @@ Salle * AcheterBillet(int i)
     laSalle=choisirFilm(i);
     
     nbClientsAttente --;
+    //checkFileDattente();
     pthread_mutex_unlock(&mutex_attenteClient);
     return  laSalle;
     
@@ -96,6 +96,7 @@ Salle * AcheterBilletAuto(int i)
     laSalle=choisirFilm(i);
     
     nbClientsAttenteAuto --;
+    //checkFileDattente();
     pthread_mutex_unlock(&mutex_attenteClient);
     return  laSalle;
     
@@ -136,7 +137,7 @@ Salle * choisirFilm(int i)
                 afficherSalles();
                 printf("client %d à acheté sa place pour le film %s dans la salle %d à la place %d\n",i,uneSalle->film->titre,uneSalle->numero,uneSalle->NBPersonnes+1);
                 (uneSalle->NBPersonnes)++;
-                pthread_create(threadManagement+NBSalles,0,(void *(*)())fonc_managerSalles,lesSallesList);
+                pthread_create(threadManagement+NBSalles,0,(void *(*)())fonc_managerSalles,lesSallesList->val);
                 NBSalles++;
                 return laSalle;
             }
@@ -207,28 +208,17 @@ void allerVoirFilm(Salle * maSalle, argStruct * arg, char * type)
     
     if(maSalle!=NULL)
     {
-        printf("Le %s %d attend devant la salle\n", type, arg->num);
-        pthread_cond_wait(&(maSalle->conditionEntrerSalle),&mutex_attenteClient);
-        pthread_cond_signal(&(maSalle->conditionEntrerSalle));
-        //attendre rentrer Salle
+        maSalle->personnesAttendent++;
+        /*
+         * Au debut, je voulais que les clients attendes devant la salle puis rentrent regarder le film
+         * Mais j'ai eu un problème d'interbloquage ici, c'est pour cela qu'il y a un comptage des personnes qui attendent.
+         */
         
+        printf("Le %s %s attend devant la salle\n", type, maSalle->film->titre);
+        pthread_cond_wait(&(conditionEntrerSalle),&mutex_attenteClient);
         maSalle->personnesAttendent--;
-        if(maSalle->personnesAttendent==0)
-        {
-            pthread_cond_signal(&(maSalle->toutLemondeDansLaSalle));
-        }
-        
         printf("Le %s %d regarde son film\n", type, arg->num);
-        pthread_cond_wait(&(maSalle->filmTermine),&mutex_attenteClient);
-        pthread_cond_signal(&(maSalle->filmTermine));
-        
-        maSalle->personnesAttendent--;
-        if(maSalle->personnesAttendent==0)
-        {
-            pthread_cond_signal(&(maSalle->toutLemondeEstSorti));
-        }
-        
-        //attendre Fin film
+
     }    
     pthread_mutex_unlock(&mutex_attenteClient);
 }
