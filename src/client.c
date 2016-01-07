@@ -1,6 +1,11 @@
 #include "../include/global.h"
 #define Salle SalleStruct
 
+
+/*
+ * Le Thread client qui vient acheter son billet et regarder un film.
+ */
+
 void * fonc_client(void *i)
 {
 
@@ -34,10 +39,13 @@ void * fonc_client(void *i)
     //usleep(200000);
     return 0;
 }
+
+
+//On verifie si il y a encore quelqu'un qui attend, et on reveille le lancement des films si il n'y a plus de client en attente
 void checkFileDattente(){
     pthread_mutex_lock(&mutex_attenteClient);
     
-    if(nbClientsAttenteAuto==0 && nbClientsAttente==0 &&nbClientInternet==0 &&nbAbonneeAttente==0 && passed==0)
+    if(nbClientsAttenteAuto==0 && nbClientsAttente==0 &&nbClientInternet==0 &&nbAbonneeAttente==0)
     {
 
         ListeSalle l = lesSallesList;
@@ -51,6 +59,9 @@ void checkFileDattente(){
     
 }
 
+
+//Achat du billet sur internet on ne ait nullement 
+//appel au threads de caisse ce qui est beaucoup plus rapide
 Salle * AcheterBilletInternet(int i)
 {
     
@@ -66,6 +77,9 @@ Salle * AcheterBilletInternet(int i)
     
 }
 
+
+//Reveil de la caissiere grâce à un moniteur POSIX
+// Achat du billet numeroté 
 Salle * AcheterBillet(int i)
 {
     
@@ -84,6 +98,7 @@ Salle * AcheterBillet(int i)
     
 }
 
+//Idem fonction précédente mais caisse automatique
 Salle * AcheterBilletAuto(int i)
 {
     
@@ -127,11 +142,6 @@ Salle * choisirFilm(int i)
                 uneSalle->numero=NBSalles+1;
                 uneSalle->CAPACITE = 80;
                 uneSalle->NBPersonnes=0;
-                pthread_cond_init(&(uneSalle->conditionEntrerSalle),NULL);
-                pthread_cond_init(&(uneSalle->filmTermine),NULL);
-                pthread_cond_init(&(uneSalle->demarrer),NULL);
-                pthread_cond_init(&(uneSalle->toutLemondeDansLaSalle),NULL);
-                pthread_cond_init(&(uneSalle->toutLemondeEstSorti),NULL);
                 printf("UneSalle à été ajoutée : \n");
                 lesSallesList=ajouterSalle(lesSallesList,uneSalle);
                 afficherSalles();
@@ -167,17 +177,14 @@ Salle * choisirFilm(int i)
     {
         printf("client %d à acheté sa place pour le film %s dans la salle %d à la place %d\n",i,laSalle->film->titre,laSalle->numero,laSalle->NBPersonnes+1);
         (laSalle->NBPersonnes)++;
-        if(laSalle->NBPersonnes>=laSalle->CAPACITE)
-        {
-            pthread_cond_signal(&(laSalle->demarrer));
-            printf("#passé par la %s \n", laSalle->film->titre);
-        }
+        
         return laSalle;
     }
     
     return laSalle;
 }
 
+//Le client est affecté dans un salle en fonction du film qu'il a choisi
 SalleStruct* choixSalle(FilmStruct * unFilm)
 {
     
@@ -200,6 +207,8 @@ SalleStruct* choixSalle(FilmStruct * unFilm)
     return NULL;
 }
 
+//le client attend devant la salle 
+//un moniteur le réveille lorsque le film va commencer
 void allerVoirFilm(Salle * maSalle, argStruct * arg, char * type)
 {
     pthread_mutex_lock(&mutex_attenteClient);

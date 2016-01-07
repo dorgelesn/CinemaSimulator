@@ -1,4 +1,13 @@
 #include "../include/global.h"
+
+/*
+ * 
+ * Les salles sont stockées dans une liste chainée car on
+ * souhaite avoir un ajout dynamique des salles en fonction du nombre de billets 
+ * refusés pour un film.
+ * 
+ */
+
 ListeSalle ajouterSalle(ListeSalle liste, SalleStruct* valeur)
 {
     //NBSalles++;
@@ -15,11 +24,6 @@ ListeSalle supprimerElementEnTete()
     {
         element* aRenvoyer = lesSallesList->nxt;
         printf("netoyage de la salle n°%d\n",lesSallesList->val->numero);
-        pthread_cond_destroy(&(lesSallesList->val->filmTermine));
-        pthread_cond_destroy(&(lesSallesList->val->conditionEntrerSalle));
-        pthread_cond_destroy(&(lesSallesList->val->demarrer));
-        pthread_cond_destroy(&(lesSallesList->val->toutLemondeDansLaSalle));
-        pthread_cond_destroy(&(lesSallesList->val->toutLemondeEstSorti));
         free(lesSallesList->val);
         free(lesSallesList);
         return aRenvoyer;

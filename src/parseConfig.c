@@ -2,19 +2,13 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 #include <string.h>
-/* static void print_element_names(xmlNode * a_node)
- * {
- *    xmlNode *cur_node = NULL;
- *    
- *    for (cur_node = a_node; cur_node; cur_node =
- *        cur_node->next) {
- *        if (cur_node->type == XML_ELEMENT_NODE) {
- *            printf("node type: Element, name: %s\n",
- *                   cur_node->name);
- *        }
- *        print_element_names(cur_node->children);
- *        }
- * } */
+
+
+/*
+ * Ce fichier ser au parsing du fichier de configuration
+ * Ansi il innitialise les variables globales au résultats voulus
+ * Utilisation de libxml2 pour parser le fichier de configuration
+ */
 
 void parserConfig()
 {
@@ -28,13 +22,6 @@ void parserConfig()
     xmlNode* lesFilmsNode = (cinema->children)->next;
     
     printf("node type: Element, name: %s\n",cinema->name);
-    /*printf("nbCaisses : %s\nnbCaissesAuto=%s\nnbClients=%s\npourcentageDePersonnesAuCaisses= %s\npourcentageDePersonnesAuCaissesAuto= %s\n", 
-           (const char*)xmlGetProp( cinema, (const xmlChar*)"nbCaisses") ,
-           (const char*)xmlGetProp( cinema, (const xmlChar*)"nbCaissesAuto") ,
-           (const char*)xmlGetProp( cinema, (const xmlChar*)"nbClients" ),
-           (const char*)xmlGetProp( cinema, (const xmlChar*)"pourcentageDePersonnesAuCaisses") ,
-           (const char*)xmlGetProp( cinema, (const xmlChar*)"pourcentageDePersonnesAuCaissesAuto"));*/
-    
     
     
     //printf("node type: Element, name: %s\n",lesFilms->name);
@@ -102,6 +89,7 @@ void parserConfig()
     printf("compteur = %d\n",compteurSalle);
     NBSalles=compteurSalle;
     
+    //creation des films
     
     lesFilms = malloc(NBFilms * sizeof(FilmStruct*));
     printf("OK\n");
@@ -137,6 +125,8 @@ void parserConfig()
             
         }
     }
+    
+    //creation des salles 
 
     for(salleNode = (lesSallesNode->children)->next; salleNode; salleNode = salleNode->next)
     {
@@ -153,12 +143,6 @@ void parserConfig()
             uneSalle->NBPersonnes=0;
             uneSalle->personnesAttendent2=0;
             uneSalle->personnesAttendent=0;
-            pthread_cond_init(&(uneSalle->conditionEntrerSalle),NULL);
-            pthread_cond_init(&(uneSalle->filmTermine),NULL);
-            pthread_cond_init(&(uneSalle->demarrer),NULL);
-            
-            pthread_cond_init(&(uneSalle->toutLemondeDansLaSalle),NULL);
-            pthread_cond_init(&(uneSalle->toutLemondeEstSorti),NULL);
             
             //printf("ajouter Salle : \n");
             lesSallesList=ajouterSalle(lesSallesList, uneSalle);

@@ -1,5 +1,8 @@
 #include "../include/global.h"
 
+
+//retourne l'index du film possédant l'identifiant filmId
+//Utile pour lier les films au salle lors du parsing du fichier de configuration.
 int getIndex(int filmId){
  
     int i;

@@ -15,7 +15,6 @@ int main()
     nbAbonneeAcheteBillet=0;
     NbSalleMax=0;
     nbClientInternet=0;
-    passed=0;
     lesSallesList = NULL;
     int num;
     pthread_mutex_init(&mutex_attenteClient, NULL);
@@ -30,7 +29,6 @@ int main()
     
     srand(time(NULL));
     parserConfig();
-    //pthread_t tid2[NbClients+Nbcaisses+NbcaissesAuto];
     tid=malloc((NbClients+Nbcaisses+NbcaissesAuto)*sizeof(pthread_t));
     arguments=malloc((NbClients+Nbcaisses+NbcaissesAuto)*sizeof(argStruct*));
     
@@ -42,18 +40,10 @@ int main()
     }
     
     afficherSalles();
-    //int testt;
-    
-    /*for(testt=0; testt < NBSalles; testt++){
-     *     printf("Salle n° %d film %s CAPACITE %d %d\n",lesSalles[testt]->numero, (lesSalles[testt]->film)->titre, lesSalles[testt]->CAPACITE, lesSalles[testt]->NBPersonnes);   
-     *        
-}*/
+
     sleep(3);
     signal(SIGINT, netoyer);
-    
-    
-    
-    // creation des caisses et des caisses auto /!\ fuite memoire
+    // creation des caisses et des caisses auto
     for(num=0;num<Nbcaisses+NbcaissesAuto;num++){
         if(num<NbcaissesAuto)
         {
@@ -78,7 +68,7 @@ int main()
     }
     sleep(10);
     
-    //creation des threads clients /!\ fuite memoire
+    //creation des threads clients 
     for(num=Nbcaisses+NbcaissesAuto;num<(NbClients+Nbcaisses+NbcaissesAuto);num ++){
         arguments[num] = malloc(sizeof(argStruct*));
         argStruct* numClient=arguments[num];

@@ -2,6 +2,17 @@
 #include <libxml/tree.h>
 #include "../include/global.h"
 
+
+
+/*
+ * 
+ * Ce fichier est charger de netoyer la memoire et les threads
+ * lors de la fin du programme ou d'une interuption
+ * 
+ */
+
+
+//fermeture ses threads caisse et clients
 static void fermetureThreads(){
  
     int i;
@@ -19,6 +30,7 @@ static void fermetureThreads(){
     
 }
 
+//netoyage des arguments de thread client et caisses
 static void netoyageArguments(){
  
     int i;
@@ -36,6 +48,12 @@ static void netoyageArguments(){
     
 }
 
+/*
+ *
+ *libération du tableau dynamique de films 
+ * 
+ */
+
 static void netoyageFilms()
 {
     int i;
@@ -50,10 +68,18 @@ static void netoyageFilms()
     
 }
 
+/*
+ * Netoyage de la liste chainée de salles 
+ */
+
 static void netoyageSalles()
 {
     detruireLesSalles();
 }
+
+/*
+ * Netoyage des thread gérent les séances
+ */
 
 void netoyageThreadManagement()
 {
@@ -70,6 +96,10 @@ void netoyageThreadManagement()
     free(threadManagement);
 }
 
+
+/*
+ * Neoyage appelé lors de l'execution du programme
+ */
 
 void netoyer(){
  
@@ -88,6 +118,8 @@ void netoyer(){
     pthread_cond_destroy(&attendreAuto);
     pthread_cond_destroy(&dormirAuto);
     pthread_cond_destroy(&attendreAbonnee);
+    pthread_cond_destroy(&conditionEntrerSalle);
+    pthread_cond_destroy(&demarrer);
     netoyageThreadManagement();
     
     fermetureThreads();
@@ -102,16 +134,16 @@ void netoyer(){
 
     
 }
+
+/*
+ * 
+ * netoyage appelé lors d'une interuption au debut ou tout à la fins lorsque 
+ * les threads client n'ont pas encore commencés ou se sont déja terminés correctement
+ * 
+ */
+
 void netoyerFin(){
  
-    // libération des ressources
-    
-    /*
-     *Ressource à netoyer : 
-     * 
-     * pthread_mutex_t mutex_attenteClient;
-     *   pthread_cond_t attendre, dormir, attendreAuto, dormirAuto, attendreAbonnee;
-     */
     printf("\n###############################\n#    Netoyage de la memoire   #\n###############################\n");
     pthread_mutex_destroy(&mutex_attenteClient);
     pthread_cond_destroy(&attendre);
@@ -119,6 +151,8 @@ void netoyerFin(){
     pthread_cond_destroy(&attendreAuto);
     pthread_cond_destroy(&dormirAuto);
     pthread_cond_destroy(&attendreAbonnee);
+    pthread_cond_destroy(&conditionEntrerSalle);
+    pthread_cond_destroy(&demarrer);
     
     //fermetureThreads();
     netoyageThreadManagement();

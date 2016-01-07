@@ -1,6 +1,9 @@
 #include "../include/global.h"
 
 
+
+//La caissière attend un client, si il y en a un Elle l'appelle et lui vends son billet 
+
 void VendreBillet(int numCaisse){
     
     pthread_mutex_lock(&mutex_attenteClient);
@@ -8,13 +11,13 @@ void VendreBillet(int numCaisse){
     if(nbClientsAttente == 0 && nbAbonneeAttente == 0)
     {
         printf("pas de clients à la caisse numero %d \n",numCaisse);
-        //printf("appels caisse %d\n",nbAppelCaisse);	
         pthread_cond_wait(&dormir, &mutex_attenteClient);
         
         //	usleep(200000);	
     }
     printf("la caissière n° %d appelle un client !\n",numCaisse);
     nbAppelCaisse++;
+    //Les abonnees son prioritaires.
     if(nbAbonneeAttente==0)
         pthread_cond_signal(&attendre);
     else

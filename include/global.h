@@ -28,7 +28,6 @@ ListeSalle lesSallesList;
 FilmStruct ** lesFilms;
 
 
-int passed;
 int NBSalles;
 int NbSalleMax;
 int NBFilms;

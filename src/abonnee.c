@@ -1,6 +1,8 @@
 #include "../include/global.h"
 #define Salle SalleStruct
 
+//L'abonne à le même fonctionnement que le client. C'est les caissières qui gèrent les priorités
+
 void * fonc_abonnee(void *i)
 {
     argStruct *arg = i;
