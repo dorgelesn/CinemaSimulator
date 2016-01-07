@@ -1,0 +1,109 @@
+\documentclass[11pt,a4paper,titlepage]{article} 
+\usepackage[utf8]{inputenc} 
+\usepackage[french]{babel} 
+\usepackage[T1]{fontenc} 
+\usepackage{amsmath} 
+\usepackage{amsfonts} 
+\usepackage{amssymb} 
+\usepackage{graphicx} 
+\usepackage[final]{pdfpages} 
+\usepackage[toc,page]{appendix} 
+\usepackage[top=2.5cm,bottom=2.5cm,right=2.5cm,left=2.5cm]{geometry} 
+\author{GLANGINE Geoffrey} 
+\title{Simulateur de vente de billet de cinéma} 
+\graphicspath{{Images/}} 
+\usepackage{fancyhdr} 
+\pagestyle{fancy} 
+\usepackage{lastpage} 
+\renewcommand
+\headrulewidth{1pt} 
+\fancyhead[L]{Systèmes d'exploitation} 
+\fancyhead[C]{GLANGINE Geoffrey} 
+\fancyhead[R]{LO41 UTBM} 
+\renewcommand
+\footrulewidth{1pt} 
+\fancyfoot[C]{\textbf{Page \thepage}} 
+\fancyfoot[L]{Automne 2015}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+% Upper part of the page. The '~' is needed because \\
+% only works if a paragraph has started.
+%\includegraphics[width=0.15\textwidth]{./logo}~\\[1cm]
+
+\textsc{\LARGE Université de technologie Belfort-Montbéliard}\\[1.5cm]
+
+\textsc{\Large Simulateur de vente de billet de cinéma}\\[0.5cm]
+
+% Title
+\HRule \\[0.4cm]
+{ \huge \bfseries LO41 Système d'Exploitation : Principes et Communication\\[0.4cm] }
+
+\HRule \\[1.5cm]
+
+% Author and supervisor
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Auteur:}\\
+\textsc{GLANGINE} Geoffrey\\
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Professeur:} \\
+\textsc{DESCAMPS} Philippe
+\end{flushright}
+\end{minipage}
+
+% Bottom of the page
+{\large \today}
+
+\end{center}
+\end{titlepage}
+\tableofcontents
+\pagebreak
+
+\part{Introduction}
+Dans le cadre de l'UV LO41 dispensée à l'UTBM, un projet de gestion de vente de billet dans un Cinéma a été donné.
+Après une analyse du sujet, j'aborderai les objectifs que je me suis fixé, ceux que j'ai réussi à implémenter ainsi
+que ceux que je n'ai pas réussi à implémenter.
+\part{Analyse du sujet}
+\section{Sujet}
+L'analyse du sujet m'a conduit à penser qu'il fallait que je fasse des thread Clients qui arrivent en plusieurs ou une seule grosse vague. Ainsi que des thread pour les caissières. Dans mon analyse de code, je pensais 
+faire choisir le film dans le thread de la caissière, mais l'implémentation m'a conduit à faire choisir le film dans le thread du client.
+
+Ainsi les caissières ne disposent d'aucune information sur les clients.  
+
+\section{Objectifs}
+\subsection{Les objectifs fixés :}
+\begin{itemize}
+ \item Je souhaitais pouvoir gérer un très grand nombre de clients à la fois (car on ne sait pas le nombre de clients qui peuvent arriver en même temps dans un Cinéma)
+ \item Je souhaitais aussi que le nombre de salles dans mon Cinéma ne soit pas limité par une quelconque valeur. (En effet dans un cinéma il y a souvent plusieurs salles fermées qui peuvent être ouverte dans le cas ou il y a beaucoup de monde.)
+ \item Je voulais pouvoir paramétrer toute les variables sans avoir à recompiler à chaque fois
+ \item Je voulais aussi que les personnes entrent dans les salles regardent le film en fonction de la durée du film et qu'ils sortent ensuite du cinéma. 
+ \end{itemize}
+
+ \subsection{Les moyens pour parvenir à mes objectifs}
+\begin{itemize}
+ \item Pour le grand nombre de client, en C c'est très facile de générer beaucoup de thread. Il suffit juste de les ordonnancer correctement.
+ \item Le nombre de salle Ouvertes dans mon cinéma n'est pas fixe. En effet mes salles sont répertoriées dans une liste chaînée.
+ \item Pour modifier les valeurs de base de mon projet, j'ai crée un fichier de configuration au format XML en utilisant la librairie libxml2.
+ \item Synchronisation de mes thread à l'aide de moniteurs 
+ \item Utilisation des signaux pour bloquer l'interruption et nettoyer la mémoire / les threads à la sortie du programme.
+\end{itemize}
+
+\subsection{Objectifs atteints}
+J'ai atteins tous les objectifs expliqués dans la partie précédente sauf le fait que les personnes entre dans les salles regardent un film d'une certaine durée et sortent du cinema à la fin. En effet j'ai une seconde version du projet qui a cette
+cette fonctionnalité d'implémentée mais elle est buggée. Dans certains cas plus ou moins rares mes threads restent bloqués dans une situation d'inter-blocage et le programme ne se termine jamais.
+Du fait de la rareté du bug et de la manière difficile de le déboguer je n'ai pas pu le résoudre. J'ai donc prévu de rendre un projet propre et fonctionnel plutôt qu'une version "Améliorée" qui ne fonctionne pas de manière sure.
+J'ai essayé de réveiller mes clients en cascade ce qui est sensé marcher théoriquement. 
+\subsection{Nettoyage de la mémoire}
+Au niveau du nettoyage de la mémoire je libère tout l'espace mémoire à la fin de mon programme et l'interrompt tous les threads qui tournent encore si l'on fait un ctrl+c.
+
+
+\end{document}
